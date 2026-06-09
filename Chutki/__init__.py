@@ -157,8 +157,8 @@ pyro_plugins = dict(root="Emilia/pyro")
 mongo = motor_asyncio.AsyncIOMotorClient(MONGO_DB_URL, minPoolSize=10, maxPoolSize=100)
 db = mongo["Emilia"]
 
-import redis.asyncio as redis
-redis_client = redis.from_url(Config.REDIS_URL, decode_responses=True)
+from Emilia.utils.memory_store import MemoryStore
+redis_client = MemoryStore()
 db.redis_client = redis_client
 
 # Initialize clients
