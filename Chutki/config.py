@@ -22,9 +22,6 @@ class Config(object):
     TOKEN = "57375" # Bot Token from @BotFather
     CLONE_LIMIT = 50 # Number of clones your bot can make
 
-    REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6379")
-    REDIS_PASSWORD = os.getenv("REDIS_PASSWORD", None)
-
     EVENT_LOGS = -10093 # Event Logs Chat ID
     OWNER_ID = 6040984893 # Owner ID
  
@@ -40,3 +37,4 @@ class Production(Config):
 
 class Development(Config):
     LOGGER = True
+    
