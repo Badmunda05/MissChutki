@@ -71,9 +71,6 @@ async def NewMemeber(client: Client, message: ChatMemberUpdated):
 
         # Emilia Welcome stuffs
         if user_id == BOT_ID:
-            if getattr(client, "is_clone", False):
-                await client.send_message(chat_id=chat_id, text="Welcome! You've just added a clone of the incredible @Elf_Robot. Thanks for choosing us! 🙌")
-                return
             await client.send_message(
                 chat_id=chat_id,
                 text=(
@@ -244,3 +241,4 @@ async def SetNewMemMessageIDs(chat_id, user_id, message_id):
 
     if await GetCleanWelcome(chat_id):
         await SetCleanWelcomeMessage(chat_id, message_id)
+        
