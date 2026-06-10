@@ -79,7 +79,5 @@ OWO = [
 
 @telethn.on(events.NewMessage(pattern="(?i)Emilia$"))
 async def Emi_(m: events.NewMessage):
-    if getattr(m.client, "is_clone", False):
-        return
     uwu = random.choice(OWO)
     await m.reply(uwu)
