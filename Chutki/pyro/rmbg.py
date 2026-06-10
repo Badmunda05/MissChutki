@@ -3,9 +3,9 @@ import io
 import aiofiles
 from pyrogram import Client
 
-from Emilia import custom_filter
-from Emilia.helper.disable import disable
-from Emilia.utils.async_http import post
+from Chutki import custom_filter
+from Chutki.helper.disable import disable
+from Chutki.utils.async_http import post
 
 REMOVE_BG_API_KEY = "vBTqsW1weqiNraoa8L33QNt8"
 

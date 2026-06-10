@@ -1,8 +1,8 @@
 from pyrogram import Client
-from Emilia import custom_filter, LOGGER
-from Emilia.helper.disable import disable
-from Emilia.utils.decorators import *
-from Emilia.utils.async_http import get
+from Chutki import custom_filter, LOGGER
+from Chutki.helper.disable import disable
+from Chutki.utils.decorators import *
+from Chutki.utils.async_http import get
 
 @usage("/pokedex [pokemon name]")
 @example("/pokedex pikachu")

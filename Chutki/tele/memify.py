@@ -5,11 +5,11 @@ import textwrap
 
 from PIL import Image, ImageDraw, ImageFont
 
-from Emilia import LOGGER
-from Emilia import telethn as bot
-from Emilia.custom_filter import register
-from Emilia.helper.disable import disable
-from Emilia.utils.decorators import *
+from Chutki import LOGGER
+from Chutki import telethn as bot
+from Chutki.custom_filter import register
+from Chutki.helper.disable import disable
+from Chutki.utils.decorators import *
 
 
 @usage("/mmf [text/reply to sticker]")
@@ -46,7 +46,7 @@ async def drawText(image_path, text):
     img = Image.open(image_path)
     os.remove(image_path)
     i_width, i_height = img.size
-    fnt = "./Emilia/utils/Logo/Roboto-Medium.ttf"
+    fnt = "./Chutki/utils/Logo/Roboto-Medium.ttf"
     m_font = ImageFont.truetype(fnt, int((70 / 640) * i_width))
 
     if ";" in text:

@@ -3,13 +3,13 @@ import html
 from pyrogram import Client, enums, filters
 from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
 
-import Emilia.strings as strings
-from Emilia import custom_filter
-from Emilia.helper.chat_status import isUserCreator
-from Emilia.helper.get_data import GetChat
-from Emilia.mongo.blocklists_mongo import get_blocklist, unblocklistall_db
-from Emilia.pyro.connection.connection import connection
-from Emilia.utils.decorators import *
+import Chutki.strings as strings
+from Chutki import custom_filter
+from Chutki.helper.chat_status import isUserCreator
+from Chutki.helper.get_data import GetChat
+from Chutki.mongo.blocklists_mongo import get_blocklist, unblocklistall_db
+from Chutki.pyro.connection.connection import connection
+from Chutki.utils.decorators import *
 
 
 @Client.on_message(custom_filter.command(commands=["unblocklistall", "unblacklistall"]))

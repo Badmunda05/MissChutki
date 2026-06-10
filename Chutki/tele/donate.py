@@ -1,4 +1,4 @@
-from Emilia.custom_filter import register
+from Chutki.custom_filter import register
 from telethon import Button
 
 @register(pattern="donate")

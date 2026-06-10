@@ -1,12 +1,12 @@
 # DONE: SFW
 
 import nekos
-from Emilia.utils.async_http import get
+from Chutki.utils.async_http import get
 
-from Emilia import telethn as meow
-from Emilia.custom_filter import register
-from Emilia.helper.disable import disable
-from Emilia.utils.decorators import exception
+from Chutki import telethn as meow
+from Chutki.custom_filter import register
+from Chutki.helper.disable import disable
+from Chutki.utils.decorators import exception
 
 url_sfw = "https://api.waifu.pics/sfw/"
 

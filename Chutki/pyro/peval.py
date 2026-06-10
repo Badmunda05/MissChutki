@@ -5,7 +5,7 @@ from datetime import datetime
 
 from pyrogram import Client, filters
 
-from Emilia import DEV_USERS
+from Chutki import DEV_USERS
 
 
 async def aexec(code, client, message):

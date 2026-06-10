@@ -1,9 +1,9 @@
 from pyrogram import Client
-from Emilia.utils.async_http import get
+from Chutki.utils.async_http import get
 
-from Emilia import custom_filter
-from Emilia.helper.disable import disable
-from Emilia.utils.decorators import *
+from Chutki import custom_filter
+from Chutki.helper.disable import disable
+from Chutki.utils.decorators import *
 
 
 @Client.on_message(

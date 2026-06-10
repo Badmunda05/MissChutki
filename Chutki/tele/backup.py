@@ -4,7 +4,7 @@ import bson
 import shutil
 import zipfile
 from datetime import datetime
-from Emilia import telethn, db, LOGGER, EVENT_LOGS as CHANNEL_ID
+from Chutki import telethn, db, LOGGER, EVENT_LOGS as CHANNEL_ID
 from telethon.errors import FloodWaitError
 
 async def dump():
@@ -85,7 +85,7 @@ async def send():
     except Exception:
         size_mb = 0
     ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    caption = f"**Emilia MongoDB Backup**\n**Date**: `{ts}`\n**Size**: `{size_mb:.1f} MB`"
+    caption = f"**Chutki MongoDB Backup**\n**Date**: `{ts}`\n**Size**: `{size_mb:.1f} MB`"
 
     sent = await _send_with_retry(out_zip, caption)
     if not sent:

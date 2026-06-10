@@ -8,11 +8,11 @@ from gtts import gTTS
 from mutagen.mp3 import MP3
 from telethon.tl.types import DocumentAttributeAudio
 
-from Emilia import telethn as meow, BOT_NAME
-from Emilia.custom_filter import register
-from Emilia.helper.disable import disable
-from Emilia.utils.decorators import *
-from Emilia.utils.async_http import get 
+from Chutki import telethn as meow, BOT_NAME
+from Chutki.custom_filter import register
+from Chutki.helper.disable import disable
+from Chutki.utils.decorators import *
+from Chutki.utils.async_http import get 
 
 
 @register(pattern="(count|gstat)")

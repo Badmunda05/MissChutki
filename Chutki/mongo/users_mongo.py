@@ -1,7 +1,7 @@
 import datetime
 
-from Emilia import db
-from Emilia.utils.write_buffer import WriteBuffer
+from Chutki import db
+from Chutki.utils.write_buffer import WriteBuffer
 
 users = db.users
 chats = db.chats

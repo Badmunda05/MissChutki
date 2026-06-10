@@ -1,8 +1,8 @@
 from pyrogram import Client
 
-from Emilia import custom_filter
-from Emilia.helper.disable import disable
-from Emilia.pyro.locks import lock_map
+from Chutki import custom_filter
+from Chutki.helper.disable import disable
+from Chutki.pyro.locks import lock_map
 
 
 @Client.on_message(custom_filter.command(commands="locktypes", disable=True))

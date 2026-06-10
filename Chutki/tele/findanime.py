@@ -1,11 +1,11 @@
 from telethon.tl.types import MessageMediaDocument, MessageMediaPhoto
 
-from Emilia import LOGGER
-from Emilia.custom_filter import register
-from Emilia.helper.disable import disable
-from Emilia.utils.decorators import *
-from Emilia.catbox import upload
-from Emilia.utils.async_http import get
+from Chutki import LOGGER
+from Chutki.custom_filter import register
+from Chutki.helper.disable import disable
+from Chutki.utils.decorators import *
+from Chutki.catbox import upload
+from Chutki.utils.async_http import get
 
 SAUCENAO_API_KEY = '605d2f8a78158eab2602bf53e616f9885e41605d'
 SAUCENAO_API_URL = 'https://saucenao.com/search.php'

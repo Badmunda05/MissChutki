@@ -4,11 +4,11 @@ from pyrogram import Client
 from pyrogram.errors import BadRequest
 from pyrogram.types import ChatPermissions
 
-from Emilia import BOT_ID, custom_filter
-from Emilia.helper.chat_status import can_restrict_member, isBotAdmin, isUserAdmin
-from Emilia.helper.get_user import get_text, get_user_id
-from Emilia.utils.decorators import *
-from Emilia.utils.decorators import logging
+from Chutki import BOT_ID, custom_filter
+from Chutki.helper.chat_status import can_restrict_member, isBotAdmin, isUserAdmin
+from Chutki.helper.get_user import get_text, get_user_id
+from Chutki.utils.decorators import *
+from Chutki.utils.decorators import logging
 
 MUTE_PERMISSIONS = ChatPermissions(can_send_messages=False)
 

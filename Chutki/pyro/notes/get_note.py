@@ -1,12 +1,12 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
-from Emilia import custom_filter
-from Emilia.helper.note_helper.note_misc_helper import privateNote_and_admin_checker
-from Emilia.helper.note_helper.note_send_message import exceNoteMessageSender
-from Emilia.mongo.notes_mongo import GetNote, is_pnote_on, isNoteExist
-from Emilia.pyro.connection.connection import connection
-from Emilia.pyro.notes.private_notes import PrivateNoteButton
+from Chutki import custom_filter
+from Chutki.helper.note_helper.note_misc_helper import privateNote_and_admin_checker
+from Chutki.helper.note_helper.note_send_message import exceNoteMessageSender
+from Chutki.mongo.notes_mongo import GetNote, is_pnote_on, isNoteExist
+from Chutki.pyro.connection.connection import connection
+from Chutki.pyro.notes.private_notes import PrivateNoteButton
 
 
 @Client.on_message(custom_filter.command(commands="get"))

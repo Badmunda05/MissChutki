@@ -1,7 +1,7 @@
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from Emilia import BOT_USERNAME
-from Emilia.helper.note_helper.note_send_message import exceNoteMessageSender
+from Chutki import BOT_USERNAME
+from Chutki.helper.note_helper.note_send_message import exceNoteMessageSender
 
 
 async def note_redirect(client, message):

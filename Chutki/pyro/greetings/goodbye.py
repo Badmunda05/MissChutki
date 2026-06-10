@@ -1,12 +1,12 @@
 from pyrogram import Client, enums
 from pyrogram.types import InlineKeyboardMarkup
 
-import Emilia.strings as strings
-from Emilia import custom_filter
-from Emilia.helper.button_gen import button_markdown_parser
-from Emilia.helper.chat_status import isUserCan
-from Emilia.helper.welcome_helper.welcome_send_message import SendWelcomeMessage
-from Emilia.mongo.welcome_mongo import (
+import Chutki.strings as strings
+from Chutki import custom_filter
+from Chutki.helper.button_gen import button_markdown_parser
+from Chutki.helper.chat_status import isUserCan
+from Chutki.helper.welcome_helper.welcome_send_message import SendWelcomeMessage
+from Chutki.mongo.welcome_mongo import (
     DEFAUT_GOODBYE,
     GetCleanService,
     GetGoobye,
@@ -14,8 +14,8 @@ from Emilia.mongo.welcome_mongo import (
     SetGoodbyeMessageOnOff,
     isGoodbye,
 )
-from Emilia.pyro.connection.connection import connection
-from Emilia.utils.decorators import *
+from Chutki.pyro.connection.connection import connection
+from Chutki.utils.decorators import *
 
 GOODBYE_TRUE = ["on", "yes"]
 GOODBYE_FALSE = ["off", "no"]
@@ -69,7 +69,7 @@ async def Welcome(client, message):
         GOODBYE_MESSAGE = (
             f"I am currently saying goodbye to users: `{GoodByeMessage}`\n"
             f"I am currently deleting service messages: `{CleanService}`\n"
-            "NOTE: If your group has more than 50 members, it is possible that Emilia will stop wishing users goodbye - this is a Telegram restriction.\n\n"
+            "NOTE: If your group has more than 50 members, it is possible that Chutki will stop wishing users goodbye - this is a Telegram restriction.\n\n"
             "Members are currently bidden farewell with:"
         )
 

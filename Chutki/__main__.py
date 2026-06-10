@@ -9,15 +9,15 @@ import time
 
 
 from pyrogram import idle
-from Emilia import LOGGER, anibot, create_indexes, pgram, telethn, TOKEN
+from Chutki import LOGGER, anibot, create_indexes, pgram, telethn, TOKEN
 
-from Emilia.data import HELPABLE, IMPORTED, SUB_MODE, HIDDEN_MOD, USER_INFO
-from Emilia.info import ALL_MODULES
-from Emilia.pyro.nightmode import start_nightmode_scheduler
-from Emilia.utils.helper import j1 as helper_scheduler
-from Emilia.tele.backup import send as send_backup
-from Emilia.helper.http import close_http_clients
-from Emilia.mongo.users_mongo import WRITE_BUFFER
+from Chutki.data import HELPABLE, IMPORTED, SUB_MODE, HIDDEN_MOD, USER_INFO
+from Chutki.info import ALL_MODULES
+from Chutki.pyro.nightmode import start_nightmode_scheduler
+from Chutki.utils.helper import j1 as helper_scheduler
+from Chutki.tele.backup import send as send_backup
+from Chutki.helper.http import close_http_clients
+from Chutki.mongo.users_mongo import WRITE_BUFFER
 
 
 HELP_MSG = "Click the button below to get help menu in your pm ~"
@@ -37,7 +37,7 @@ def import_modules():
         try:
             if module not in IMPORTED:
                 LOGGER.info(f"Importing module: {module}")
-                imported_module = importlib.import_module("Emilia" + module)
+                imported_module = importlib.import_module("Chutki" + module)
 
                 if not hasattr(imported_module, "__mod_name__"):
                     imported_module.__mod_name__ = imported_module.__name__
@@ -131,7 +131,7 @@ async def main():
     helper_scheduler.start()
     LOGGER.info("Schedulers started successfully.")
 
-    from Emilia.utils.cache import start_cache_cleanup
+    from Chutki.utils.cache import start_cache_cleanup
 
     async def _delayed_backup():
         try:
@@ -146,14 +146,14 @@ async def main():
     asyncio.create_task(start_cache_cleanup())
 
     try:
-        from Emilia.functions.admins import start_admin_cache_task
+        from Chutki.functions.admins import start_admin_cache_task
         asyncio.create_task(start_admin_cache_task())
         LOGGER.info("Started admin cache update task.")
     except Exception as e:
         LOGGER.error(f"Failed to start admin cache task: {e}")
 
     try:
-        from Emilia.tele.levels import start_levels_flush_task
+        from Chutki.tele.levels import start_levels_flush_task
         asyncio.create_task(start_levels_flush_task(5.0))
         LOGGER.info("Started periodic levels buffer flusher.")
     except Exception as e:
@@ -174,7 +174,7 @@ async def main():
     LOGGER.info("Pyrogram clients exited.")
 
     try:
-        from Emilia.tele.levels import flush_levels_buffers_now as _flush_levels
+        from Chutki.tele.levels import flush_levels_buffers_now as _flush_levels
         await _flush_levels()
     except Exception as e:
         LOGGER.error(f"Error flushing levels buffers on shutdown: {e}")
@@ -215,7 +215,7 @@ if __name__ == "__main__":
             loop.run_until_complete(asyncio.sleep(0.1))
         
         try:
-            from Emilia.tele.chatbot import shutdown_chatbot
+            from Chutki.tele.chatbot import shutdown_chatbot
             asyncio.run(shutdown_chatbot())
         except Exception as e:
             LOGGER.error(f"Error shutting down chatbot: {e}")
@@ -226,7 +226,7 @@ if __name__ == "__main__":
             LOGGER.error(f"Error closing helper HTTP clients: {e}")
         
         try:
-            from Emilia.utils.cache import locks_cache, admin_cache, blocklist_cache, anonymous_admin_cache, approvals_cache
+            from Chutki.utils.cache import locks_cache, admin_cache, blocklist_cache, anonymous_admin_cache, approvals_cache
             async def stop_caches():
                 await locks_cache.stop()
                 await admin_cache.stop()

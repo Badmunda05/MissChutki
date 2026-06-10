@@ -1,8 +1,8 @@
 from pyrogram import Client
 
-from Emilia import custom_filter
-from Emilia.helper.chat_status import CheckAllAdminsStuffs
-from Emilia.utils.decorators import *
+from Chutki import custom_filter
+from Chutki.helper.chat_status import CheckAllAdminsStuffs
+from Chutki.utils.decorators import *
 
 
 @Client.on_message(custom_filter.command(commands="unpin"))

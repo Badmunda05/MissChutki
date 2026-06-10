@@ -2,14 +2,14 @@ import os
 import time
 from datetime import datetime
 
-from Emilia.utils.async_http import post, get
+from Chutki.utils.async_http import post, get
 from bs4 import BeautifulSoup
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from Emilia import BOT_USERNAME
-from Emilia.utils.db import get_collection
-from Emilia.utils.google_trans_new import google_translator
-from Emilia.utils.helper import (
+from Chutki import BOT_USERNAME
+from Chutki.utils.db import get_collection
+from Chutki.utils.google_trans_new import google_translator
+from Chutki.utils.helper import (
     cflag,
     day_,
     make_it_rw,

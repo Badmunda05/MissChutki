@@ -4,7 +4,7 @@ import random
 import re
 import time
 
-from Emilia.utils.async_http import post
+from Chutki.utils.async_http import post
 from pyrogram import Client, filters
 from pyrogram.enums import ChatMemberStatus, ChatType
 from pyrogram.errors import UserNotParticipant, WebpageCurlFailed, WebpageMediaEmpty
@@ -16,7 +16,7 @@ from pyrogram.types import (
     Message,
 )
 
-from Emilia import (
+from Chutki import (
     ANILIST_CLIENT,
     ANILIST_REDIRECT_URL,
     ANILIST_SECRET,
@@ -25,7 +25,7 @@ from Emilia import (
     anibot,
     custom_filter,
 )
-from Emilia.utils.data_parser import (
+from Chutki.utils.data_parser import (
     AIRING_DB,
     ANIME_DB,
     CHAR_DB,
@@ -51,8 +51,8 @@ from Emilia.utils.data_parser import (
     toggle_favourites,
     update_anilist,
 )
-from Emilia.utils.db import get_collection
-from Emilia.utils.helper import (
+from Chutki.utils.db import get_collection
+from Chutki.utils.helper import (
     AUTH_USERS,
     PIC_LS,
     check_user,
@@ -60,8 +60,8 @@ from Emilia.utils.helper import (
     control_user,
     get_btns,
 )
-from Emilia.utils.helper import get_user_from_channel as gcc
-from Emilia.utils.helper import rand_key
+from Chutki.utils.helper import get_user_from_channel as gcc
+from Chutki.utils.helper import rand_key
 
 GROUPS = get_collection("GROUPS")
 SFW_GRPS = get_collection("SFW_GROUPS")
@@ -136,7 +136,7 @@ example: /anime Ao Haru Ride"""
     try:
         await client.send_photo(gid, title_img, caption=finals_, reply_markup=buttons)
     except (WebpageMediaEmpty, WebpageCurlFailed):
-        await clog("Emilia", title_img, "LINK", msg=message)
+        await clog("Chutki", title_img, "LINK", msg=message)
         await client.send_photo(gid, failed_pic, caption=finals_, reply_markup=buttons)
     if title_img not in PIC_LS:
         PIC_LS.append(title_img)
@@ -205,7 +205,7 @@ example: /manga The teasing master Takagi san"""
     try:
         await client.send_photo(gid, pic, caption=finals_, reply_markup=buttons)
     except (WebpageMediaEmpty, WebpageCurlFailed):
-        await clog("Emilia", pic, "LINK", msg=message)
+        await clog("Chutki", pic, "LINK", msg=message)
         await client.send_photo(gid, failed_pic, caption=finals_, reply_markup=buttons)
     if pic not in PIC_LS:
         PIC_LS.append(pic)
@@ -255,7 +255,7 @@ async def character_cmd(client: Client, message: Message, mdata: dict):
     try:
         await client.send_photo(gid, img, caption=cap_text, reply_markup=buttons)
     except (WebpageMediaEmpty, WebpageCurlFailed):
-        await clog("Emilia", img, "LINK", msg=message)
+        await clog("Chutki", img, "LINK", msg=message)
         await client.send_photo(gid, failed_pic, caption=cap_text, reply_markup=buttons)
 
 
@@ -320,7 +320,7 @@ async def anilist_cmd(client: Client, message: Message, mdata: dict):
     try:
         await client.send_photo(gid, pic, caption=msg, reply_markup=buttons)
     except (WebpageMediaEmpty, WebpageCurlFailed):
-        await clog("Emilia", pic, "LINK", msg=message)
+        await clog("Chutki", pic, "LINK", msg=message)
         await client.send_photo(gid, failed_pic, caption=msg, reply_markup=buttons)
     if pic not in PIC_LS:
         PIC_LS.append(pic)
@@ -381,7 +381,7 @@ Or connect your channel with /aniconnect cmd if you are anonymous""",
     try:
         await client.send_photo(gid, pic, caption=msg, reply_markup=buttons)
     except (WebpageMediaEmpty, WebpageCurlFailed):
-        await clog("Emilia", pic, "LINK", msg=message)
+        await clog("Chutki", pic, "LINK", msg=message)
         await client.send_photo(gid, failed_pic, caption=msg, reply_markup=buttons)
 
 
@@ -512,7 +512,7 @@ example: /airing Fumetsu no Anata e"""
     try:
         await client.send_photo(gid, coverImg, caption=out, reply_markup=btn)
     except (WebpageMediaEmpty, WebpageCurlFailed):
-        await clog("Emilia", coverImg, "LINK", msg=message)
+        await clog("Chutki", coverImg, "LINK", msg=message)
         await client.send_photo(gid, failed_pic, caption=out, reply_markup=btn)
     update = True
     for i in PIC_LS:
@@ -729,7 +729,7 @@ Or connect your channel with /aniconnect cmd if you are anonymous""",
     try:
         await client.send_photo(gid, pic, caption=msg, reply_markup=btns)
     except (WebpageMediaEmpty, WebpageCurlFailed):
-        await clog("Emilia", pic, "LINK", msg=message)
+        await clog("Chutki", pic, "LINK", msg=message)
         await client.send_photo(gid, failed_pic, caption=msg, reply_markup=btns)
 
 
@@ -788,7 +788,7 @@ Or connect your channel with /aniconnect cmd if you are anonymous""",
             gid, result[0], caption="Choose one of the below options", reply_markup=btn
         )
     except (WebpageMediaEmpty, WebpageCurlFailed):
-        await clog("Emilia", result[0], "LINK", msg=message)
+        await clog("Chutki", result[0], "LINK", msg=message)
         await client.send_photo(
             gid, failed_pic, caption="Choose one of the below options", reply_markup=btn
         )
@@ -952,7 +952,7 @@ This material is marked 18+ and not allowed in this group""",
             InputMediaPhoto(pic, caption=msg), reply_markup=button
         )
     except (WebpageMediaEmpty, WebpageCurlFailed):
-        await clog("Emilia", pic, "LINK", msg=cq)
+        await clog("Chutki", pic, "LINK", msg=cq)
         await cq.edit_message_media(
             InputMediaPhoto(failed_pic, caption=msg), reply_markup=button
         )
@@ -1022,7 +1022,7 @@ async def anime_btn(client: Client, cq: CallbackQuery, cdata: dict):
             InputMediaPhoto(pic, caption=msg), reply_markup=btns
         )
     except (WebpageMediaEmpty, WebpageCurlFailed):
-        await clog("Emilia", pic, "LINK", msg=cq)
+        await clog("Chutki", pic, "LINK", msg=cq)
         await cq.edit_message_media(
             InputMediaPhoto(failed_pic, caption=msg), reply_markup=btns
         )
@@ -1117,7 +1117,7 @@ async def flex_btn(client: Client, cq: CallbackQuery, cdata: dict):
             InputMediaPhoto(pic, caption=msg), reply_markup=btns
         )
     except (WebpageMediaEmpty, WebpageCurlFailed):
-        await clog("Emilia", pic, "LINK", msg=cq)
+        await clog("Chutki", pic, "LINK", msg=cq)
         await cq.edit_message_media(
             InputMediaPhoto(failed_pic, caption=msg), reply_markup=btns
         )
@@ -1157,7 +1157,7 @@ async def list_favourites_btn(client: Client, cq: CallbackQuery, cdata: dict):
         )
     except (WebpageMediaEmpty, WebpageCurlFailed):
         await clog(
-            "Emilia",
+            "Chutki",
             f"https://img.anili.st/user/{q[1]}?a={time.time()}",
             "LINK",
             msg=cq,
@@ -1185,7 +1185,7 @@ async def favourites_btn(client: Client, cq: CallbackQuery, cdata: dict):
             InputMediaPhoto(pic, caption=msg), reply_markup=btns
         )
     except (WebpageMediaEmpty, WebpageCurlFailed):
-        await clog("Emilia", pic, "LINK", msg=cq)
+        await clog("Chutki", pic, "LINK", msg=cq)
         await cq.edit_message_media(
             InputMediaPhoto(failed_pic, caption=msg), reply_markup=btns
         )
@@ -1207,7 +1207,7 @@ async def get_user_back_btn(client: Client, cq: CallbackQuery, cdata: dict):
             InputMediaPhoto(pic, caption=msg), reply_markup=btns
         )
     except (WebpageMediaEmpty, WebpageCurlFailed):
-        await clog("Emilia", pic, "LINK", msg=cq)
+        await clog("Chutki", pic, "LINK", msg=cq)
         await cq.edit_message_media(
             InputMediaPhoto(failed_pic, caption=msg), creply_markup=btns
         )
@@ -1326,7 +1326,7 @@ async def toggle_favourites_btn(client: Client, cq: CallbackQuery, cdata: dict):
             InputMediaPhoto(pic, caption=msg), reply_markup=btns
         )
     except (WebpageMediaEmpty, WebpageCurlFailed):
-        await clog("Emilia", pic, "LINK", msg=cq)
+        await clog("Chutki", pic, "LINK", msg=cq)
         await cq.edit_message_media(
             InputMediaPhoto(failed_pic, caption=msg), reply_markup=btns
         )
@@ -1527,7 +1527,7 @@ async def update_anilist_btn(client: Client, cq: CallbackQuery, cdata: dict):
             InputMediaPhoto(pic, caption=msg), reply_markup=btns
         )
     except (WebpageMediaEmpty, WebpageCurlFailed):
-        await clog("Emilia", pic, "LINK", msg=cq)
+        await clog("Chutki", pic, "LINK", msg=cq)
         await cq.edit_message_media(
             InputMediaPhoto(failed_pic, caption=msg), reply_markup=btns
         )
@@ -1615,7 +1615,7 @@ async def additional_info_btn(client: Client, cq: CallbackQuery, cdata: dict):
             InputMediaPhoto(pic, caption=msg), reply_markup=InlineKeyboardMarkup(button)
         )
     except (WebpageMediaEmpty, WebpageCurlFailed):
-        await clog("Emilia", pic, "LINK", msg=cq)
+        await clog("Chutki", pic, "LINK", msg=cq)
         await cq.edit_message_media(
             InputMediaPhoto(failed_pic, caption=msg),
             reply_markup=InlineKeyboardMarkup(button),
@@ -1668,7 +1668,7 @@ async def featured_in_btn(client: Client, cq: CallbackQuery, cdata: dict):
             InputMediaPhoto(pic, caption=msg), reply_markup=InlineKeyboardMarkup(button)
         )
     except (WebpageMediaEmpty, WebpageCurlFailed):
-        await clog("Emilia", pic, "LINK", msg=cq)
+        await clog("Chutki", pic, "LINK", msg=cq)
         await cq.edit_message_media(
             InputMediaPhoto(failed_pic, caption=msg),
             reply_markup=InlineKeyboardMarkup(button),
@@ -1725,7 +1725,7 @@ async def featured_in_switch_btn(client: Client, cq: CallbackQuery, cdata: dict)
             InputMediaPhoto(pic, caption=msg), reply_markup=InlineKeyboardMarkup(button)
         )
     except (WebpageMediaEmpty, WebpageCurlFailed):
-        await clog("Emilia", pic, "LINK", msg=cq)
+        await clog("Chutki", pic, "LINK", msg=cq)
         await cq.edit_message_media(
             InputMediaPhoto(failed_pic, caption=msg),
             reply_markup=InlineKeyboardMarkup(button),

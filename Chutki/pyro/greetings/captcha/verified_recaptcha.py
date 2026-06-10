@@ -1,10 +1,10 @@
 from pyrogram import Client, enums
 
-import Emilia.strings as strings
-from Emilia import custom_filter
-from Emilia.helper.chat_status import isUserAdmin
-from Emilia.mongo.welcome_mongo import isReCaptcha, setReCaptcha
-from Emilia.pyro.connection.connection import connection
+import Chutki.strings as strings
+from Chutki import custom_filter
+from Chutki.helper.chat_status import isUserAdmin
+from Chutki.mongo.welcome_mongo import isReCaptcha, setReCaptcha
+from Chutki.pyro.connection.connection import connection
 
 RECAPTCHA_TRUE = ["on", "yes"]
 RECAPTCHA_FALSE = ["off", "no"]

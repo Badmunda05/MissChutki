@@ -2,7 +2,7 @@ import html
 
 from pyrogram import Client
 
-from Emilia import custom_filter
+from Chutki import custom_filter
 
 
 @Client.on_message(custom_filter.command(commands="pinned"))

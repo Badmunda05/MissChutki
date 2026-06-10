@@ -2,9 +2,9 @@ from pyrogram import Client
 from pyrogram.errors import WebpageCurlFailed
 from pyrogram.types import Message
 
-from Emilia import custom_filter
-from Emilia.helper.disable import disable
-from Emilia.utils.decorators import *
+from Chutki import custom_filter
+from Chutki.helper.disable import disable
+from Chutki.utils.decorators import *
 
 
 @usage("/webss [website link]")

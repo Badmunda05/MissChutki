@@ -1,6 +1,6 @@
 import datetime
 
-from Emilia import db
+from Chutki import db
 
 connection = db.connection
 chats = db.chats

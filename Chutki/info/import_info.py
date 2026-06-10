@@ -3,7 +3,7 @@ __mod_name__ = "Import/Export"
 __help__ = """
 Some people just want to see the world burn. Others, just want to have a way of grouping their chat data in one place so they can export their configuration to other chats!
 
-Emilia allows you to import/export settings for chat, so you can quickly set up other chats using a preexisting template. Instead of setting the same settings over and over again in different chats, you can use this feature to copy the general configuration across groups.
+Chutki allows you to import/export settings for chat, so you can quickly set up other chats using a preexisting template. Instead of setting the same settings over and over again in different chats, you can use this feature to copy the general configuration across groups.
 The generated file is in standard JSON format, so if there are any settings you don't want to import to your other chats, just open the file and edit it before importing.
 Exporting settings can be done by any administrator, but for security reasons, importing can only be done by the group creator.
 

@@ -6,12 +6,12 @@ import os
 import random
 
 from PIL import Image, ImageDraw, ImageFont
-from Emilia.utils.async_http import get
+from Chutki.utils.async_http import get
 
-from Emilia import telethn
-from Emilia.custom_filter import register
-from Emilia.helper.disable import disable
-from Emilia.utils.decorators import *
+from Chutki import telethn
+from Chutki.custom_filter import register
+from Chutki.helper.disable import disable
+from Chutki.utils.decorators import *
 
 LOGO_LINKS = [
     "https://graph.org/file/d1838efdafce9fe611d0c.jpg",
@@ -269,7 +269,7 @@ async def lego(event):
     img = Image.open(io.BytesIO(response.content))
     draw = ImageDraw.Draw(img)
     image_widthz, image_heightz = img.size
-    fnt = glob.glob("Emilia/utils/Logo/*")
+    fnt = glob.glob("Chutki/utils/Logo/*")
 
     randf = random.choice(fnt)
     font = ImageFont.truetype(randf, 120)
@@ -290,7 +290,7 @@ async def lego(event):
     draw.text(
         (x, y), text, font=font, fill="white", stroke_width=1, stroke_fill="black"
     )
-    fname = "Emilia.png"
+    fname = "Chutki.png"
     img.save(fname, "png")
     await telethn.send_file(event.chat_id, file=fname)
     await pesan.delete()

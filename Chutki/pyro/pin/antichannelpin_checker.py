@@ -1,8 +1,8 @@
 from pyrogram import Client, enums, filters
 
 
-from Emilia.helper.chat_status import isBotCan
-from Emilia.mongo.pin_mongo import get_antichannelpin
+from Chutki.helper.chat_status import isBotCan
+from Chutki.mongo.pin_mongo import get_antichannelpin
 
 
 @Client.on_message(filters.all & filters.group, group=7)

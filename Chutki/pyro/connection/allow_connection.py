@@ -1,11 +1,11 @@
 from pyrogram import Client
 
-import Emilia.strings as strings
-from Emilia import custom_filter
-from Emilia.helper.chat_status import isUserAdmin
-from Emilia.mongo.connection_mongo import allow_collection, get_allow_connection
-from Emilia.pyro.connection.connection import connection
-from Emilia.utils.decorators import *
+import Chutki.strings as strings
+from Chutki import custom_filter
+from Chutki.helper.chat_status import isUserAdmin
+from Chutki.mongo.connection_mongo import allow_collection, get_allow_connection
+from Chutki.pyro.connection.connection import connection
+from Chutki.utils.decorators import *
 
 ALLOW_CONNECTION_TRUE = ["on", "yes", "true"]
 ALLOW_CONNECTION_FALSE = ["off", "no", "false"]

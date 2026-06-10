@@ -3,17 +3,17 @@ from pyrogram.enums import ChatMemberStatus
 from pyrogram.types import ChatMemberUpdated, InlineKeyboardMarkup, Message
 
 
-from Emilia.helper.button_gen import button_markdown_parser
-from Emilia.helper.welcome_helper.welcome_fillings import Welcomefillings
-from Emilia.helper.welcome_helper.welcome_send_message import SendWelcomeMessage
-from Emilia.mongo.welcome_mongo import (
+from Chutki.helper.button_gen import button_markdown_parser
+from Chutki.helper.welcome_helper.welcome_fillings import Welcomefillings
+from Chutki.helper.welcome_helper.welcome_send_message import SendWelcomeMessage
+from Chutki.mongo.welcome_mongo import (
     DEFAUT_GOODBYE,
     GetCleanService,
     GetGoobye,
     GetGoodbyemessageOnOff,
     isGoodbye,
 )
-from Emilia.utils.decorators import *
+from Chutki.utils.decorators import *
 
 
 @Client.on_message(filters.service & filters.group, group=59)

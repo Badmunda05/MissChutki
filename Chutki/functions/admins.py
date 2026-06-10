@@ -8,10 +8,10 @@ from telethon.errors.rpcerrorlist import UserNotParticipantError
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import MessageEntityMention, MessageEntityMentionName, MessageEntityTextUrl
 
-import Emilia.strings as strings
-from Emilia import DEV_USERS, db
-from Emilia import telethn as meow
-from Emilia.utils.decorators import *
+import Chutki.strings as strings
+from Chutki import DEV_USERS, db
+from Chutki import telethn as meow
+from Chutki.utils.decorators import *
 
 cache_collection = db.admincache
 

@@ -1,12 +1,12 @@
 from pyrogram import Client
 
-from Emilia import custom_filter, db
-from Emilia.helper.chat_status import isUserAdmin
-from Emilia.helper.filters_helper.get_filters_message import GetFIlterMessage
-from Emilia.helper.get_data import get_text_reason
-from Emilia.mongo.filters_mongo import add_filter_db
-from Emilia.pyro.connection.connection import connection
-from Emilia.utils.decorators import *
+from Chutki import custom_filter, db
+from Chutki.helper.chat_status import isUserAdmin
+from Chutki.helper.filters_helper.get_filters_message import GetFIlterMessage
+from Chutki.helper.get_data import get_text_reason
+from Chutki.mongo.filters_mongo import add_filter_db
+from Chutki.pyro.connection.connection import connection
+from Chutki.utils.decorators import *
 
 filters = db.filters
 

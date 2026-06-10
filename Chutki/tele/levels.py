@@ -4,13 +4,13 @@ import asyncio
 
 from telethon import Button, events
 
-import Emilia.strings as strings
-from Emilia import LOGGER, db, telethn
-from Emilia.custom_filter import callbackquery, register
-from Emilia.functions.admins import get_time, is_admin
-from Emilia.utils.decorators import *
-from Emilia.utils.cache import SimpleCache
-from Emilia.utils.rank_card import generate_rank_card_sync
+import Chutki.strings as strings
+from Chutki import LOGGER, db, telethn
+from Chutki.custom_filter import callbackquery, register
+from Chutki.functions.admins import get_time, is_admin
+from Chutki.utils.decorators import *
+from Chutki.utils.cache import SimpleCache
+from Chutki.utils.rank_card import generate_rank_card_sync
 import functools
 import math
 

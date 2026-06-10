@@ -4,12 +4,12 @@ from pyrogram import Client, filters
 from pyrogram.enums import ChatType
 from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
 
-from Emilia import custom_filter
-from Emilia.helper.chat_status import CheckAdmins, isUserCreator
-from Emilia.helper.get_data import GetChat
-from Emilia.mongo.notes_mongo import ClearAllNotes, ClearNote, NoteList, isNoteExist
-from Emilia.pyro.connection.connection import connection
-from Emilia.utils.decorators import *
+from Chutki import custom_filter
+from Chutki.helper.chat_status import CheckAdmins, isUserCreator
+from Chutki.helper.get_data import GetChat
+from Chutki.mongo.notes_mongo import ClearAllNotes, ClearNote, NoteList, isNoteExist
+from Chutki.pyro.connection.connection import connection
+from Chutki.utils.decorators import *
 
 
 @usage("/clear [note name]")

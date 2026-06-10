@@ -14,12 +14,12 @@ from pyrogram.types import (
 )
 from tracemoepy.errors import ServerError
 
-from Emilia import anibot, custom_filter
-from Emilia.anime.anilist import no_pic
-from Emilia.utils.data_parser import check_if_adult
-from Emilia.utils.db import get_collection
-from Emilia.utils.helper import clog, control_user, media_to_image, rand_key
-from Emilia.helper.http import get_aiohttp_session
+from Chutki import anibot, custom_filter
+from Chutki.anime.anilist import no_pic
+from Chutki.utils.data_parser import check_if_adult
+from Chutki.utils.db import get_collection
+from Chutki.utils.helper import clog, control_user, media_to_image, rand_key
+from Chutki.helper.http import get_aiohttp_session
 
 SFW_GRPS = get_collection("SFW_GROUPS")
 DC = get_collection("DISABLED_CMDS")
@@ -66,7 +66,7 @@ async def trace_bekkkkkk(client: anibot, message: Message, mdata: dict):
                 e.split("\n").pop(-2)
                 + "\n\nTrying again in 2-3 minutes might just fix this"
             )
-            await clog("Emilia", e, "TRACEMOE", replied=replied)
+            await clog("Chutki", e, "TRACEMOE", replied=replied)
             return
         result = search["result"][0]
         caption_ = (
@@ -111,7 +111,7 @@ async def trace_bekkkkkk(client: anibot, message: Message, mdata: dict):
                 e.split("\n").pop(-2)
                 + "\n\nTrying again in 2-3 minutes might just fix this"
             )
-            await clog("Emilia", e, "TRACEMOE", replied=replied)
+            await clog("Chutki", e, "TRACEMOE", replied=replied)
             return
     else:
         await message.reply_text("Couldn't parse results!!!")

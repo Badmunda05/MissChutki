@@ -1,9 +1,9 @@
 from pyrogram import Client, filters
 from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
 
-from Emilia import custom_filter
-from Emilia.helper.chat_status import CheckAllAdminsStuffs, isUserCan
-from Emilia.utils.decorators import *
+from Chutki import custom_filter
+from Chutki.helper.chat_status import CheckAllAdminsStuffs, isUserCan
+from Chutki.utils.decorators import *
 
 
 @Client.on_message(custom_filter.command(commands="unpinall"))

@@ -2,7 +2,7 @@ from datetime import datetime, timedelta
 
 from pyrogram.types import Message
 
-from Emilia.helper.convert import convert_time
+from Chutki.helper.convert import convert_time
 
 
 async def get_time(message):

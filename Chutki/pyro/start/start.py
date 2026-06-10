@@ -4,16 +4,16 @@ from pyrogram.enums import ChatType
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from bson.objectid import ObjectId
 
-from Emilia import custom_filter, BOT_NAME, TOKEN, SUPPORT_CHAT, UPDATE_CHANNEL, START_PIC
-from Emilia.anime.bot import get_anime, get_recommendations, auth_link_cmd, logout_cmd, get_additional_info, code_cmd
-from Emilia.pyro.connection.connect import connectRedirect
-from Emilia.pyro.greetings.captcha.button_captcha import buttonCaptchaRedirect
-from Emilia.pyro.greetings.captcha.text_captcha import textCaptchaRedirect
-from Emilia.pyro.notes.private_notes import note_redirect
-from Emilia.pyro.rules.rules import rulesRedirect
-from Emilia.utils.decorators import *
-from Emilia.utils.helper import AUTH_USERS, get_btns
-from Emilia.anime.bot import help_
+from Chutki import custom_filter, BOT_NAME, TOKEN, SUPPORT_CHAT, UPDATE_CHANNEL, START_PIC
+from Chutki.anime.bot import get_anime, get_recommendations, auth_link_cmd, logout_cmd, get_additional_info, code_cmd
+from Chutki.pyro.connection.connect import connectRedirect
+from Chutki.pyro.greetings.captcha.button_captcha import buttonCaptchaRedirect
+from Chutki.pyro.greetings.captcha.text_captcha import textCaptchaRedirect
+from Chutki.pyro.notes.private_notes import note_redirect
+from Chutki.pyro.rules.rules import rulesRedirect
+from Chutki.utils.decorators import *
+from Chutki.utils.helper import AUTH_USERS, get_btns
+from Chutki.anime.bot import help_
 
 START_TEXT = """
 Welcome to [{} :3]({})
@@ -42,7 +42,7 @@ async def starttt(client, message):
                     InlineKeyboardButton("Support", url=f"https://t.me/{SUPPORT_CHAT}"),
                     InlineKeyboardButton("News", url=f"https://t.me/{UPDATE_CHANNEL}"),
                 ],
-                [InlineKeyboardButton("Source Code", url="https://github.com/ArshCypherZ/Emilia")],
+                [InlineKeyboardButton("Source Code", url="https://github.com/ArshCypherZ/Chutki")],
             ]
             await message.reply_text(
                 START_TEXT.format(BOT_NAME, START_PIC),

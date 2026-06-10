@@ -2,11 +2,11 @@ from asyncio import sleep
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from pyrogram.errors import FloodWait
 
-from Emilia import BOT_USERNAME
-from Emilia.helper.button_gen import button_markdown_parser
-from Emilia.helper.note_helper.note_fillings import NoteFillings
-from Emilia.helper.note_helper.note_misc_helper import preview_text_replace
-from Emilia.utils.decorators import rate_limit
+from Chutki import BOT_USERNAME
+from Chutki.helper.button_gen import button_markdown_parser
+from Chutki.helper.note_helper.note_fillings import NoteFillings
+from Chutki.helper.note_helper.note_misc_helper import preview_text_replace
+from Chutki.utils.decorators import rate_limit
 
 @rate_limit((10, 5))
 async def SendFilterMessage(

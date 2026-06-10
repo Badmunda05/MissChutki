@@ -4,11 +4,11 @@ from pyrogram import Client
 from pyrogram.enums import ChatType
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from Emilia import BOT_USERNAME, custom_filter
-from Emilia.helper.chat_status import isUserAdmin
-from Emilia.helper.get_data import GetChat
-from Emilia.mongo.connection_mongo import connectDB, get_allow_connection
-from Emilia.utils.decorators import *
+from Chutki import BOT_USERNAME, custom_filter
+from Chutki.helper.chat_status import isUserAdmin
+from Chutki.helper.get_data import GetChat
+from Chutki.mongo.connection_mongo import connectDB, get_allow_connection
+from Chutki.utils.decorators import *
 
 
 @usage("/connect [chat id]")

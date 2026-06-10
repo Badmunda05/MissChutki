@@ -1,7 +1,7 @@
 import asyncio
 import datetime
 from pymongo import UpdateOne
-from Emilia import db, LOGGER
+from Chutki import db, LOGGER
 
 class WriteBuffer:
     def __init__(self, flush_interval=5):

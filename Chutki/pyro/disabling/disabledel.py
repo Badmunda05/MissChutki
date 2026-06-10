@@ -1,11 +1,11 @@
 from pyrogram import Client, enums
 
-import Emilia.strings as strings
-from Emilia import custom_filter
-from Emilia.helper.chat_status import check_bot, check_user
-from Emilia.mongo.disable_mongo import disabledel_db
-from Emilia.pyro.connection.connection import connection
-from Emilia.utils.decorators import *
+import Chutki.strings as strings
+from Chutki import custom_filter
+from Chutki.helper.chat_status import check_bot, check_user
+from Chutki.mongo.disable_mongo import disabledel_db
+from Chutki.pyro.connection.connection import connection
+from Chutki.utils.decorators import *
 
 DISABLEDEL_TRUE = ["on", "yes"]
 DISABLEDEL_FALSE = ["off", "no"]

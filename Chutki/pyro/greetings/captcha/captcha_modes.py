@@ -1,11 +1,11 @@
 from pyrogram import Client, enums
 
-import Emilia.strings as strings
-from Emilia import custom_filter
-from Emilia.helper.chat_status import isBotAdmin, isUserCan
-from Emilia.mongo.welcome_mongo import GetCaptchaSettings, SetCaptchaMode
-from Emilia.pyro.connection.connection import connection
-from Emilia.utils.decorators import *
+import Chutki.strings as strings
+from Chutki import custom_filter
+from Chutki.helper.chat_status import isBotAdmin, isUserCan
+from Chutki.mongo.welcome_mongo import GetCaptchaSettings, SetCaptchaMode
+from Chutki.pyro.connection.connection import connection
+from Chutki.utils.decorators import *
 
 CAPTCHA_MODE_MAP = {
     "text": "Text CAPTCHAs require the user to answer a CAPTCHA containing letters and numbers.",

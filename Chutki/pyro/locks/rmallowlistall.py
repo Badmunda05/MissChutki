@@ -3,9 +3,9 @@ import html
 from pyrogram import Client, filters
 from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
 
-from Emilia import custom_filter
-from Emilia.helper.chat_status import isUserAdmin
-from Emilia.mongo.locks_mongo import rmallowall_db
+from Chutki import custom_filter
+from Chutki.helper.chat_status import isUserAdmin
+from Chutki.mongo.locks_mongo import rmallowall_db
 
 
 @Client.on_message(custom_filter.command(commands="rmallowlistall"))

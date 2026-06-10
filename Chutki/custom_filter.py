@@ -8,7 +8,7 @@ from functools import wraps
 from pyrogram.filters import create
 from telethon import events
 
-from Emilia import BOT_USERNAME, DEV_USERS, telethn, LOGGER
+from Chutki import BOT_USERNAME, DEV_USERS, telethn, LOGGER
 
 DISABLE_COMMANDS = []
 HANDLERS_REGISTRY = [] # List of (handler_func, event_type, args)

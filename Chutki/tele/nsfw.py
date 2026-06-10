@@ -1,13 +1,13 @@
 # DONE: NSFW
 
-from Emilia.utils.async_http import get
+from Chutki.utils.async_http import get
 
-import Emilia.strings as strings
-from Emilia import telethn as meow
-from Emilia.custom_filter import register
-from Emilia.functions.admins import is_admin
-from Emilia.mongo.nsfw_mongo import is_nsfw_on, nsfw_off, nsfw_on
-from Emilia.utils.decorators import *
+import Chutki.strings as strings
+from Chutki import telethn as meow
+from Chutki.custom_filter import register
+from Chutki.functions.admins import is_admin
+from Chutki.mongo.nsfw_mongo import is_nsfw_on, nsfw_off, nsfw_on
+from Chutki.utils.decorators import *
 
 url_nsfw = "https://api.waifu.pics/nsfw/"
 

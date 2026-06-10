@@ -3,8 +3,8 @@ from asyncio import sleep
 
 from pyrogram import Client, filters, errors
 
-from Emilia.helper.filters_helper.send_filter_message import SendFilterMessage
-from Emilia.mongo.filters_mongo import get_filter, get_filters_list
+from Chutki.helper.filters_helper.send_filter_message import SendFilterMessage
+from Chutki.mongo.filters_mongo import get_filter, get_filters_list
 
 
 @Client.on_message(filters.all & ~filters.user(777000), group=8)

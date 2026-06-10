@@ -26,15 +26,15 @@ from telethon.tl.types import (
     UserStatusLastWeek,
 )
 
-import Emilia.strings as strings
-from Emilia import LOGGER
-from Emilia import telethn as meow
-from Emilia.custom_filter import callbackquery as inline
-from Emilia.custom_filter import register
-from Emilia.functions.admins import *
-from Emilia.helper.get_data import GetChat
-from Emilia.pyro.connection.connection import connection
-from Emilia.utils.decorators import *
+import Chutki.strings as strings
+from Chutki import LOGGER
+from Chutki import telethn as meow
+from Chutki.custom_filter import callbackquery as inline
+from Chutki.custom_filter import register
+from Chutki.functions.admins import *
+from Chutki.helper.get_data import GetChat
+from Chutki.pyro.connection.connection import connection
+from Chutki.utils.decorators import *
 
 # Resolve the target chat to operate on. In PM, use connected chat if available.
 async def _target_chat_id(event):

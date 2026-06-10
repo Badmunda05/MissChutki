@@ -1,12 +1,12 @@
 from pyrogram import Client, enums, filters
 from pyrogram.raw import functions, types
 
-import Emilia.strings as strings
-from Emilia import custom_filter, db
-from Emilia.helper.chat_status import check_user
-from Emilia.pyro.connection.connection import connection
-from Emilia.utils.decorators import *
-from Emilia.pyro.pin.cleanlinked_checker import GetLinkedChannel
+import Chutki.strings as strings
+from Chutki import custom_filter, db
+from Chutki.helper.chat_status import check_user
+from Chutki.pyro.connection.connection import connection
+from Chutki.utils.decorators import *
+from Chutki.pyro.pin.cleanlinked_checker import GetLinkedChannel
 
 # db
 antichanneldb = db.antichannel

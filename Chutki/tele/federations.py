@@ -8,16 +8,16 @@ from telethon import Button, events, types
 from telethon.errors.rpcerrorlist import UserNotParticipantError
 from telethon.tl.functions.channels import GetParticipantRequest
 
-import Emilia.strings as strings
-from Emilia import BOT_ID, DEV_USERS, OWNER_ID
-from Emilia import telethn as meow
-from Emilia.custom_filter import callbackquery as inline
-from Emilia.custom_filter import register
-from Emilia.functions.admins import *
-from Emilia.functions.admins import get_user_reason as get_user
-from Emilia.helper.get_data import GetChat
-from Emilia.mongo import feds_db as db
-from Emilia.pyro.connection.connection import connection
+import Chutki.strings as strings
+from Chutki import BOT_ID, DEV_USERS, OWNER_ID
+from Chutki import telethn as meow
+from Chutki.custom_filter import callbackquery as inline
+from Chutki.custom_filter import register
+from Chutki.functions.admins import *
+from Chutki.functions.admins import get_user_reason as get_user
+from Chutki.helper.get_data import GetChat
+from Chutki.mongo import feds_db as db
+from Chutki.pyro.connection.connection import connection
 
 # im_bannable
 ADMINS = DEV_USERS

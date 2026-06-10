@@ -1,4 +1,4 @@
-from Emilia import db
+from Chutki import db
 
 birthday_collection = db.birthday
 

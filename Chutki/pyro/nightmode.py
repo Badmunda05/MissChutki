@@ -7,9 +7,9 @@ from pyrogram.types import (
     InlineKeyboardMarkup,
 )
 
-from Emilia import LOGGER, custom_filter
-from Emilia.helper.chat_status import check_user, isUserAdmin
-from Emilia.mongo.nightmode_mongo import (
+from Chutki import LOGGER, custom_filter
+from Chutki.helper.chat_status import check_user, isUserAdmin
+from Chutki.mongo.nightmode_mongo import (
     get_nightchats,
     nightdb,
     nightmode_off,

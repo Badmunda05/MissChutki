@@ -1,10 +1,10 @@
 from pyrogram import Client
 
-from Emilia import custom_filter
-from Emilia.helper.chat_status import isBotCan, isUserCan
-from Emilia.helper.get_user import get_text
-from Emilia.pyro.warnings.warn import warn
-from Emilia.utils.decorators import *
+from Chutki import custom_filter
+from Chutki.helper.chat_status import isBotCan, isUserCan
+from Chutki.helper.get_user import get_text
+from Chutki.pyro.warnings.warn import warn
+from Chutki.utils.decorators import *
 
 
 @Client.on_message(custom_filter.command(commands=["warn", "swarn", "dwarn"]))

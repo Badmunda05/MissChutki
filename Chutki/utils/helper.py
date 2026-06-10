@@ -11,7 +11,7 @@ from traceback import format_exc as err
 from typing import Optional, Tuple
 from uuid import uuid4
 
-from Emilia.utils.async_http import post
+from Chutki.utils.async_http import post
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from pyrogram import Client
 from pyrogram.enums import ChatType
@@ -23,8 +23,8 @@ from pyrogram.types import (
     Message,
 )
 
-from Emilia import DEV_USERS, DOWN_PATH, EVENT_LOGS, anibot, LOGGER
-from Emilia.utils.db import get_collection
+from Chutki import DEV_USERS, DOWN_PATH, EVENT_LOGS, anibot, LOGGER
+from Chutki.utils.db import get_collection
 
 AUTH_USERS = get_collection("AUTH_USERS")
 IGNORE = get_collection("IGNORED_USERS")
@@ -78,7 +78,7 @@ def control_user(func):
             gidtitle = message.chat.username or message.chat.title
             await GROUPS.update_one({"_id": chat_id}, {"$set": {"grp": gidtitle}}, upsert=True)
             await clog(
-                "Emilia",
+                "Chutki",
                 f"Bot added to a new group\n\n{gidtitle}\nID: `{chat_id}`",
                 "NEW_GROUP",
             )
@@ -89,7 +89,7 @@ def control_user(func):
         # Rate Limiting with Redis
         if user_id not in DEV_USERS:
             try:
-                from Emilia import redis_client
+                from Chutki import redis_client
                 key = f"spam_check:{user_id}"
                 
                 # Check last message time
@@ -106,7 +106,7 @@ def control_user(func):
                         await message.reply_text(
                             ("Stop spamming bot!!!" + "\nElse you will be blacklisted"),
                         )
-                        await clog("Emilia", f"UserID: {user_id}", "SPAM")
+                        await clog("Chutki", f"UserID: {user_id}", "SPAM")
                     
                     if spam_count >= 5:
                         await IGNORE.update_one({"_id": user_id}, {"$set": {"_id": user_id}}, upsert=True)
@@ -118,7 +118,7 @@ def control_user(func):
                                 + "@SpiralTechDivision"
                             )
                         )
-                        await clog("Emilia", f"UserID: {user_id}", "BAN")
+                        await clog("Chutki", f"UserID: {user_id}", "BAN")
                         return
                     
                     # Wait based on spam count to slow them down
@@ -149,14 +149,14 @@ def control_user(func):
                 reply_msg = message.reply_to_message
             try:
                 await clog(
-                    "Emilia",
+                    "Chutki",
                     "Message:\n" + (message.text or "") + "\n\n" + "```" + e + "```",
                     "COMMAND",
                     msg=message,
                     replied=reply_msg,
                 )
             except Exception:
-                await clog("Emilia", e, "FAILURE", msg=message)
+                await clog("Chutki", e, "FAILURE", msg=message)
 
     return wrapper
 
@@ -195,7 +195,7 @@ def check_user(func):
                             ("Stop spamming bot!!!\n" + "Else you will be blacklisted"),
                             show_alert=True,
                         )
-                        await clog("Emilia", f"UserID: {user_id}", "SPAM")
+                        await clog("Chutki", f"UserID: {user_id}", "SPAM")
                 except Exception:
                     pass
                 USER_JSON[user_id] = nt
@@ -212,14 +212,14 @@ def check_user(func):
                     reply_msg = c_q.message.reply_to_message
                 try:
                     await clog(
-                        "Emilia",
+                        "Chutki",
                         "Callback:\n" + cq_data + "\n\n" + "```" + e + "```",
                         "CALLBACK",
                         cq=c_q,
                         replied=reply_msg,
                     )
                 except Exception:
-                    await clog("Emilia", e, "FAILURE", cq=c_q)
+                    await clog("Chutki", e, "FAILURE", cq=c_q)
         else:
             if cqowner_is_ch:
                 if not user_valid:
@@ -715,7 +715,7 @@ async def remove_down_path_files():
                 continue
     except Exception as e:
         # Log and continue; do not crash scheduler
-        from Emilia import LOGGER
+        from Chutki import LOGGER
         LOGGER.warning(f"remove_down_path_files: failed to clean downloads dir {DOWN_PATH}: {e}")
         return
 

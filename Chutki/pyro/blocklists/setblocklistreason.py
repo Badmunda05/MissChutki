@@ -1,11 +1,11 @@
 from pyrogram import Client, enums
 
-import Emilia.strings as strings
-from Emilia import custom_filter
-from Emilia.helper.chat_status import isUserCan
-from Emilia.mongo.blocklists_mongo import getblocklistmode, setblocklistreason_db
-from Emilia.pyro.connection.connection import connection
-from Emilia.utils.decorators import *
+import Chutki.strings as strings
+from Chutki import custom_filter
+from Chutki.helper.chat_status import isUserCan
+from Chutki.mongo.blocklists_mongo import getblocklistmode, setblocklistreason_db
+from Chutki.pyro.connection.connection import connection
+from Chutki.utils.decorators import *
 
 
 @Client.on_message(custom_filter.command(commands="setblocklistreason"))

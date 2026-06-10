@@ -3,13 +3,13 @@ import html
 from pyrogram import Client
 from pyrogram.enums import ChatType
 
-from Emilia import custom_filter
-from Emilia.helper.chat_status import CheckAdmins
-from Emilia.helper.get_data import GetChat
-from Emilia.helper.note_helper.get_note_message import GetNoteMessage
-from Emilia.mongo.notes_mongo import SaveNote
-from Emilia.pyro.connection.connection import connection
-from Emilia.utils.decorators import *
+from Chutki import custom_filter
+from Chutki.helper.chat_status import CheckAdmins
+from Chutki.helper.get_data import GetChat
+from Chutki.helper.note_helper.get_note_message import GetNoteMessage
+from Chutki.mongo.notes_mongo import SaveNote
+from Chutki.pyro.connection.connection import connection
+from Chutki.utils.decorators import *
 
 
 @usage("/save [trigger/reply to content] or [trigger content]")

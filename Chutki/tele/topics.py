@@ -2,11 +2,11 @@
 
 from telethon import functions
 
-import Emilia.strings as strings
-from Emilia import telethn as meow
-from Emilia.custom_filter import register
-from Emilia.functions.admins import can_manage_topics
-from Emilia.utils.decorators import *
+import Chutki.strings as strings
+from Chutki import telethn as meow
+from Chutki.custom_filter import register
+from Chutki.functions.admins import can_manage_topics
+from Chutki.utils.decorators import *
 
 
 async def _get_args_text(event):

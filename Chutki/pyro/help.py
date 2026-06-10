@@ -6,11 +6,11 @@ from pyrogram.enums import ChatType
 from pyrogram.errors import BadRequest
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from Emilia import BOT_USERNAME, custom_filter, LOGGER
-from Emilia.data import HELPABLE, SUB_MODE
-from Emilia.helper.disable import disable
-from Emilia.helper.pagination_buttons import paginate_modules
-from Emilia.utils.decorators import *
+from Chutki import BOT_USERNAME, custom_filter, LOGGER
+from Chutki.data import HELPABLE, SUB_MODE
+from Chutki.helper.disable import disable
+from Chutki.helper.pagination_buttons import paginate_modules
+from Chutki.utils.decorators import *
 
 HELP_TEXT = """
 **Main** commands available:

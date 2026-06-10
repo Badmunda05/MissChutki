@@ -1,11 +1,11 @@
 from pyrogram import Client
 
-from Emilia import custom_filter, db
-from Emilia.helper.chat_status import CheckAllAdminsStuffs
-from Emilia.helper.get_data import get_text_reason
-from Emilia.mongo.blocklists_mongo import add_blocklist_db
-from Emilia.pyro.connection.connection import connection
-from Emilia.utils.decorators import *
+from Chutki import custom_filter, db
+from Chutki.helper.chat_status import CheckAllAdminsStuffs
+from Chutki.helper.get_data import get_text_reason
+from Chutki.mongo.blocklists_mongo import add_blocklist_db
+from Chutki.pyro.connection.connection import connection
+from Chutki.utils.decorators import *
 
 blocklist = db.blocklists
 

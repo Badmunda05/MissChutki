@@ -1,9 +1,9 @@
 import asyncio
 from telethon import events
-import Emilia.strings as strings
-from Emilia import telethn
-from Emilia.custom_filter import register
-from Emilia.functions.admins import is_admin
+import Chutki.strings as strings
+from Chutki import telethn
+from Chutki.custom_filter import register
+from Chutki.functions.admins import is_admin
 
 
 @register(pattern="all")

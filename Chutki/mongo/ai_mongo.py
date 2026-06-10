@@ -1,4 +1,4 @@
-from Emilia import db
+from Chutki import db
 
 chatbotdb1 = db.ai
 

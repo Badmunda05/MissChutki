@@ -1,8 +1,8 @@
 import random
 
-from Emilia import telethn as meow
-from Emilia.custom_filter import register as cum
-from Emilia.helper.disable import disable
+from Chutki import telethn as meow
+from Chutki.custom_filter import register as cum
+from Chutki.helper.disable import disable
 
 reactions = [
     "( ͡° ͜ʖ ͡°)",

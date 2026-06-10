@@ -4,7 +4,7 @@ import os
 import sys
 import traceback
 
-from Emilia.custom_filter import auth
+from Chutki.custom_filter import auth
 
 
 @auth(pattern="exec")
@@ -104,7 +104,7 @@ async def aexec(code, event):
 @auth(pattern="restart")
 async def _(e):
     await e.reply("`Restarting..`")
-    os.execv(sys.executable, ["python3", "-m", "Emilia"])
+    os.execv(sys.executable, ["python3", "-m", "Chutki"])
 
 
 @auth(pattern="logs")

@@ -1,10 +1,10 @@
 from pyrogram import Client
 
-from Emilia import custom_filter
-from Emilia.helper.chat_status import CheckAllAdminsStuffs
-from Emilia.mongo.welcome_mongo import GetCleanService, SetCleanService
-from Emilia.pyro.connection.connection import connection
-from Emilia.utils.decorators import *
+from Chutki import custom_filter
+from Chutki.helper.chat_status import CheckAllAdminsStuffs
+from Chutki.mongo.welcome_mongo import GetCleanService, SetCleanService
+from Chutki.pyro.connection.connection import connection
+from Chutki.utils.decorators import *
 
 CLEAN_SERVICE_TRUE = ["on", "yes"]
 CLEAN_SERVICE_FALSE = ["off", "no"]

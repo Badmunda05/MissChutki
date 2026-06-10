@@ -1,5 +1,5 @@
 from typing import Iterable
-from Emilia import OWNER_ID, DEV_USERS
+from Chutki import OWNER_ID, DEV_USERS
 
 DEV_SET = set(int(x) for x in (DEV_USERS or []))
 DEV_SET.add(int(OWNER_ID))

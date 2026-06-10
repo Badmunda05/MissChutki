@@ -4,13 +4,13 @@ from datetime import datetime, timedelta
 
 from telethon import errors, events
 
-import Emilia.strings as strings
-from Emilia import db, telethn
-from Emilia.custom_filter import register
-from Emilia.functions.admins import can_change_info
-from Emilia.helper.get_data import GetChat
-from Emilia.pyro.connection.connection import connection
-from Emilia.utils.decorators import *
+import Chutki.strings as strings
+from Chutki import db, telethn
+from Chutki.custom_filter import register
+from Chutki.functions.admins import can_change_info
+from Chutki.helper.get_data import GetChat
+from Chutki.pyro.connection.connection import connection
+from Chutki.utils.decorators import *
 
 # Configurable default values
 DEFAULT_ANTIRAID_DURATION = 6

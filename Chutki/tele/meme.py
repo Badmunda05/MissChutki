@@ -2,11 +2,11 @@
 
 import random
 
-from Emilia.utils.async_http import get
+from Chutki.utils.async_http import get
 
-from Emilia.custom_filter import register
-from Emilia.helper.disable import disable
-from Emilia.utils.decorators import exception
+from Chutki.custom_filter import register
+from Chutki.helper.disable import disable
+from Chutki.utils.decorators import exception
 
 MemesReddit = [
     "Animemes",

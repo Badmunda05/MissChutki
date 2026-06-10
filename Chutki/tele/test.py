@@ -1,5 +1,5 @@
-from Emilia.custom_filter import register
-from Emilia.utils.decorators import *
+from Chutki.custom_filter import register
+from Chutki.utils.decorators import *
 
 
 @register(pattern="test")

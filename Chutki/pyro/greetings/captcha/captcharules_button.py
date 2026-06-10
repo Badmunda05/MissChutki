@@ -10,9 +10,9 @@ from pyrogram.types import (
 )
 
 
-from Emilia.helper.get_data import GetChat
-from Emilia.mongo.rules_mongo import get_rules
-from Emilia.pyro.greetings.utils.actions import passedAction
+from Chutki.helper.get_data import GetChat
+from Chutki.mongo.rules_mongo import get_rules
+from Chutki.pyro.greetings.utils.actions import passedAction
 
 
 async def ruleCaptchaButton(

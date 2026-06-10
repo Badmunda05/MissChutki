@@ -1,6 +1,6 @@
 from pyrogram import Client, enums, filters
 
-from Emilia.mongo.users_mongo import add_chat, add_user
+from Chutki.mongo.users_mongo import add_chat, add_user
 
 
 @Client.on_message(filters.all & filters.group & ~filters.user(777000), group=1)

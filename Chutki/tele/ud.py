@@ -1,8 +1,8 @@
-from Emilia.utils.async_http import get
+from Chutki.utils.async_http import get
 from telethon import Button, errors
 
-from Emilia.custom_filter import register
-from Emilia.helper.disable import disable
+from Chutki.custom_filter import register
+from Chutki.helper.disable import disable
 
 
 async def get_ud_definition(text):

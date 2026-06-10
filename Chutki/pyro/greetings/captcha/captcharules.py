@@ -1,10 +1,10 @@
 from pyrogram import Client, enums
 
-import Emilia.strings as strings
-from Emilia import custom_filter
-from Emilia.helper.chat_status import isUserCan
-from Emilia.mongo.welcome_mongo import isRuleCaptcha, setRuleCaptcha
-from Emilia.pyro.connection.connection import connection
+import Chutki.strings as strings
+from Chutki import custom_filter
+from Chutki.helper.chat_status import isUserCan
+from Chutki.mongo.welcome_mongo import isRuleCaptcha, setRuleCaptcha
+from Chutki.pyro.connection.connection import connection
 
 CAPTCHARULE_TRUE = ["on", "yes"]
 CAPTCHARULE_FALSE = ["off", "no"]

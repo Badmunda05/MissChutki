@@ -3,10 +3,10 @@
 import wikipedia
 from wikipedia.exceptions import DisambiguationError, PageError
 
-from Emilia import telethn as meow, LOGGER
-from Emilia.custom_filter import register
-from Emilia.helper.disable import disable
-from Emilia.utils.decorators import *
+from Chutki import telethn as meow, LOGGER
+from Chutki.custom_filter import register
+from Chutki.helper.disable import disable
+from Chutki.utils.decorators import *
 
 
 class AsyncWikipedia:

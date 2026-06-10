@@ -3,12 +3,12 @@ import asyncio
 from pyrogram import Client, enums, filters
 from urlextract import URLExtract
 
-from Emilia import db
-from Emilia.helper.chat_status import check_bot, isUserAdmin
-from Emilia.mongo.locks_mongo import get_allowlist, get_locks, lockwarns_db
-from Emilia.pyro.locks import lock_map
-from Emilia.pyro.warnings.warn import warn
-from Emilia.utils.cache import SimpleCache, approvals_cache
+from Chutki import db
+from Chutki.helper.chat_status import check_bot, isUserAdmin
+from Chutki.mongo.locks_mongo import get_allowlist, get_locks, lockwarns_db
+from Chutki.pyro.locks import lock_map
+from Chutki.pyro.warnings.warn import warn
+from Chutki.utils.cache import SimpleCache, approvals_cache
 
 collection = db["approve_d"]
 

@@ -1,7 +1,7 @@
 from pyrogram import Client
 
-from Emilia import custom_filter
-from Emilia.helper.chat_status import isUserAdmin
+from Chutki import custom_filter
+from Chutki.helper.chat_status import isUserAdmin
 
 
 @Client.on_message(custom_filter.command(commands="pininfo"))

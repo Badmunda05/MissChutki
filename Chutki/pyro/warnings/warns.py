@@ -1,12 +1,12 @@
 from pyrogram import Client, enums
 
-import Emilia.strings as strings
-from Emilia import custom_filter
-from Emilia.helper.chat_status import isUserAdmin
-from Emilia.helper.disable import disable
-from Emilia.helper.get_user import get_user_id
-from Emilia.mongo.warnings_mongo import count_user_warn, get_all_warn_reason, warn_limit
-from Emilia.pyro.connection.connection import connection
+import Chutki.strings as strings
+from Chutki import custom_filter
+from Chutki.helper.chat_status import isUserAdmin
+from Chutki.helper.disable import disable
+from Chutki.helper.get_user import get_user_id
+from Chutki.mongo.warnings_mongo import count_user_warn, get_all_warn_reason, warn_limit
+from Chutki.pyro.connection.connection import connection
 
 
 @Client.on_message(custom_filter.command(commands="warns", disable=True))

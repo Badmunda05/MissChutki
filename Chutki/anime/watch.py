@@ -6,10 +6,10 @@ from pyrogram.types import (
     Message,
 )
 
-from Emilia import anibot, custom_filter
-from Emilia.utils.data_parser import get_wo, get_wols
-from Emilia.utils.db import get_collection
-from Emilia.utils.helper import check_user, control_user
+from Chutki import anibot, custom_filter
+from Chutki.utils.data_parser import get_wo, get_wols
+from Chutki.utils.db import get_collection
+from Chutki.utils.helper import check_user, control_user
 
 DC = get_collection("DISABLED_CMDS")
 

@@ -16,12 +16,12 @@ from pyrogram.handlers import CallbackQueryHandler
 from telethon import errors
 from telethon.errors.rpcerrorlist import PersistentTimestampOutdatedError
 
-from Emilia import BOT_ID, LOGGER, db, telethn
-from Emilia.helper.chat_status import anon_admin_checker
-from Emilia.helper.get_data import GetChat
-from Emilia.mongo.connection_mongo import GetConnectedChat
-from Emilia.mongo.chats_settings_mongo import get_anon_setting_cached
-from Emilia.strings import error_messages
+from Chutki import BOT_ID, LOGGER, db, telethn
+from Chutki.helper.chat_status import anon_admin_checker
+from Chutki.helper.get_data import GetChat
+from Chutki.mongo.connection_mongo import GetConnectedChat
+from Chutki.mongo.chats_settings_mongo import get_anon_setting_cached
+from Chutki.strings import error_messages
 
 # Rate Limit Constants
 # (requests, window_seconds)
@@ -399,7 +399,7 @@ message_history = {}
 
 
 # Redis Rate Limiting
-from Emilia import db
+from Chutki import db
 redis_client = db.redis_client
 
 def rate_limit(limit_config=RATE_LIMIT_GENERAL):

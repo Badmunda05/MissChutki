@@ -7,8 +7,8 @@ from pyrogram.enums import ChatMemberStatus, ChatType
 from pyrogram.errors import BadRequest
 from pyrogram.types import Message
 
-from Emilia import BOT_ID, DEV_USERS
-from Emilia.utils.cache import admin_cache
+from Chutki import BOT_ID, DEV_USERS
+from Chutki.utils.cache import admin_cache
 
 BOT_PERMISSIONS_STRINGS = {
     "can_delete_messages": "Looks like I haven't got the right to delete messages; mind promoting me? Thanks!",

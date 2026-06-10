@@ -1,5 +1,5 @@
-from Emilia import db
-from Emilia.utils.cache import cached_db_call, locks_cache
+from Chutki import db
+from Chutki.utils.cache import cached_db_call, locks_cache
 
 locks = db.locks
 

@@ -1,10 +1,10 @@
 from pyrogram import Client
 
-from Emilia import custom_filter
-from Emilia.helper.chat_status import isUserAdmin
-from Emilia.mongo.filters_mongo import get_filters_list, stop_db
-from Emilia.pyro.connection.connection import connection
-from Emilia.utils.decorators import *
+from Chutki import custom_filter
+from Chutki.helper.chat_status import isUserAdmin
+from Chutki.mongo.filters_mongo import get_filters_list, stop_db
+from Chutki.pyro.connection.connection import connection
+from Chutki.utils.decorators import *
 
 
 @usage("/stop [filter name]")

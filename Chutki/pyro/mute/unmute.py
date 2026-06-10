@@ -1,11 +1,11 @@
 from pyrogram import Client
 from pyrogram.types import ChatPermissions
 
-from Emilia import custom_filter
-from Emilia.helper.chat_status import CheckAllAdminsStuffs
-from Emilia.helper.get_user import get_user_id
-from Emilia.utils.decorators import *
-from Emilia.utils.decorators import logging
+from Chutki import custom_filter
+from Chutki.helper.chat_status import CheckAllAdminsStuffs
+from Chutki.helper.get_user import get_user_id
+from Chutki.utils.decorators import *
+from Chutki.utils.decorators import logging
 
 UNMUTE_PERMISSIONS = ChatPermissions(
     can_send_messages=True,

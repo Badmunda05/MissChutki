@@ -1,9 +1,9 @@
 from pyrogram import Client
 
-from Emilia import custom_filter
-from Emilia.helper.chat_status import CheckAllAdminsStuffs
-from Emilia.utils.decorators import *
-from Emilia.utils.decorators import logging
+from Chutki import custom_filter
+from Chutki.helper.chat_status import CheckAllAdminsStuffs
+from Chutki.utils.decorators import *
+from Chutki.utils.decorators import logging
 
 
 @Client.on_message(custom_filter.command(commands="pin"))

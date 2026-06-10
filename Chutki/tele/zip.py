@@ -9,11 +9,11 @@ from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 from telethon.tl.types import DocumentAttributeVideo
 
-import Emilia.strings as strings
-from Emilia import TEMP_DOWNLOAD_DIRECTORY, telethn
-from Emilia.custom_filter import register
-from Emilia.functions.admins import *
-from Emilia.utils.decorators import *
+import Chutki.strings as strings
+from Chutki import TEMP_DOWNLOAD_DIRECTORY, telethn
+from Chutki.custom_filter import register
+from Chutki.functions.admins import *
+from Chutki.utils.decorators import *
 
 
 @usage("/zip [reply to file]")

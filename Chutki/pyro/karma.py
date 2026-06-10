@@ -1,9 +1,9 @@
 from pyrogram import Client, filters
 
-from Emilia import custom_filter, db
-from Emilia.helper.chat_status import check_user
-from Emilia.mongo.karma_mongo import is_karma_on, karma_off, karma_on
-from Emilia.utils.decorators import *
+from Chutki import custom_filter, db
+from Chutki.helper.chat_status import check_user
+from Chutki.mongo.karma_mongo import is_karma_on, karma_off, karma_on
+from Chutki.utils.decorators import *
 
 regex_upvote = r"(?i)^(\+|\+\+|\+1|thx|tnx|ty|thank you|thanx|thanks|pro|cool|good|👍|nice|noice|piro|arsh)$"
 regex_downvote = (

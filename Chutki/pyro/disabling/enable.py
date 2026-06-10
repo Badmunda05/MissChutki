@@ -1,12 +1,12 @@
 from pyrogram import Client, enums
 
-import Emilia.strings as strings
-from Emilia import custom_filter
-from Emilia.custom_filter import DISABLE_COMMANDS
-from Emilia.helper.chat_status import check_user
-from Emilia.mongo.disable_mongo import enable_db
-from Emilia.pyro.connection.connection import connection
-from Emilia.utils.decorators import *
+import Chutki.strings as strings
+from Chutki import custom_filter
+from Chutki.custom_filter import DISABLE_COMMANDS
+from Chutki.helper.chat_status import check_user
+from Chutki.mongo.disable_mongo import enable_db
+from Chutki.pyro.connection.connection import connection
+from Chutki.utils.decorators import *
 
 
 @usage("/enable [command]")

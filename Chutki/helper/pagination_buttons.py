@@ -1,7 +1,7 @@
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from Emilia.data import HIDDEN_MOD
-from Emilia import LOGGER
+from Chutki.data import HIDDEN_MOD
+from Chutki import LOGGER
 
 
 class EqInlineKeyboardButton(InlineKeyboardButton):

@@ -1,7 +1,7 @@
 from typing import Optional, Dict, Any
-from Emilia import db
-from Emilia.utils.db import find_one as db_find_one, find as db_find
-from Emilia.utils.constants import normalize_filter
+from Chutki import db
+from Chutki.utils.db import find_one as db_find_one, find as db_find
+from Chutki.utils.constants import normalize_filter
 
 feds = db.feds
 fbans = db.fbans

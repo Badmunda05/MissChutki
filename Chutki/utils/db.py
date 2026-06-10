@@ -2,8 +2,8 @@ __all__ = ["get_collection"]
 
 from motor.core import AgnosticClient, AgnosticCollection, AgnosticDatabase
 from typing import Dict, Any, Optional
-from Emilia import db as _DATABASE
-from Emilia.utils.constants import COLL, normalize_filter
+from Chutki import db as _DATABASE
+from Chutki.utils.constants import COLL, normalize_filter
 
 
 COLLECTIONS = COLL

@@ -3,8 +3,8 @@ from datetime import datetime, timedelta
 
 from pyrogram import Client, enums
 
-from Emilia import custom_filter, db, LOGGER
-from Emilia.helper.disable import disable
+from Chutki import custom_filter, db, LOGGER
+from Chutki.helper.disable import disable
 
 collection = db.coup
 

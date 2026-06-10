@@ -1,9 +1,9 @@
 from pyrogram import Client
 
-from Emilia import custom_filter
-from Emilia.helper.chat_status import CheckAdmins
-from Emilia.mongo.welcome_mongo import GetCleanWelcome, SetCleanWelcome
-from Emilia.pyro.connection.connection import connection
+from Chutki import custom_filter
+from Chutki.helper.chat_status import CheckAdmins
+from Chutki.mongo.welcome_mongo import GetCleanWelcome, SetCleanWelcome
+from Chutki.pyro.connection.connection import connection
 
 CLEAN_WELCOME_TRUE = ["on", "yes"]
 CLEAN_WELCOME_FALSE = ["off", "no"]

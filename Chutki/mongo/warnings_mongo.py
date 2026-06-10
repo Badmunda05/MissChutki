@@ -1,4 +1,4 @@
-from Emilia import db
+from Chutki import db
 
 warn_settings = db.warn_settings
 user_warnings = db.user_warnings

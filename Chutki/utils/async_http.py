@@ -7,7 +7,7 @@ import os
 from urllib.parse import urlparse
 
 import aiohttp
-from Emilia.helper.http import get_aiohttp_session, close_http_clients
+from Chutki.helper.http import get_aiohttp_session, close_http_clients
 
 
 class AsyncResponse:

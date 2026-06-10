@@ -6,11 +6,11 @@ from pyrogram.types import (
     InlineKeyboardMarkup,
 )
 
-from Emilia import BOT_USERNAME
-from Emilia.helper.button_gen import button_markdown_parser
-from Emilia.helper.chat_status import isUserAdmin
-from Emilia.mongo.rules_mongo import get_rules
-from Emilia.mongo.welcome_mongo import (
+from Chutki import BOT_USERNAME
+from Chutki.helper.button_gen import button_markdown_parser
+from Chutki.helper.chat_status import isUserAdmin
+from Chutki.mongo.rules_mongo import get_rules
+from Chutki.mongo.welcome_mongo import (
     GetCaptchaSettings,
     GetUserCaptchaMessageIDs,
     GetWelcome,
@@ -19,7 +19,7 @@ from Emilia.mongo.welcome_mongo import (
     isUserVerified,
     isWelcome,
 )
-from Emilia.pyro.greetings.captcha.captcharules_button import ruleCaptchaButton
+from Chutki.pyro.greetings.captcha.captcharules_button import ruleCaptchaButton
 
 
 async def CaptchaButton(chat_id, user_id):

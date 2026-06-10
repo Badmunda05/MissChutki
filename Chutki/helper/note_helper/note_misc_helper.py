@@ -1,4 +1,4 @@
-from Emilia.helper.chat_status import isUserAdmin
+from Chutki.helper.chat_status import isUserAdmin
 
 
 async def privateNote_and_admin_checker(message, text: str):

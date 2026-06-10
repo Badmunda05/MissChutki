@@ -1,12 +1,12 @@
 import datetime
 import random
 from telethon import events
-from Emilia import telethn, LOGGER
-from Emilia.custom_filter import register
-from Emilia.utils.decorators import usage, example, description
-from Emilia.mongo import birthday_mongo as db
-from Emilia.utils.helper import j1 as scheduler
-from Emilia.functions.admins import can_change_info
+from Chutki import telethn, LOGGER
+from Chutki.custom_filter import register
+from Chutki.utils.decorators import usage, example, description
+from Chutki.mongo import birthday_mongo as db
+from Chutki.utils.helper import j1 as scheduler
+from Chutki.functions.admins import can_change_info
 
 BIRTHDAY_WISHES = [
     "Happy Birthday! 🎉 May your day be filled with joy and laughter!",

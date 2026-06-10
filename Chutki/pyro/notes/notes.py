@@ -3,11 +3,11 @@ import html
 from pyrogram import Client
 from pyrogram.enums import ChatType
 
-from Emilia import custom_filter
-from Emilia.helper.disable import disable
-from Emilia.helper.get_data import GetChat
-from Emilia.mongo.notes_mongo import NoteList
-from Emilia.pyro.connection.connection import connection
+from Chutki import custom_filter
+from Chutki.helper.disable import disable
+from Chutki.helper.get_data import GetChat
+from Chutki.mongo.notes_mongo import NoteList
+from Chutki.pyro.connection.connection import connection
 
 
 @Client.on_message(custom_filter.command(commands=(["notes", "saved"]), disable=True))

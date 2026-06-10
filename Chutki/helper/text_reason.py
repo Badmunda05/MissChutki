@@ -1,6 +1,6 @@
 from pyrogram.enums import MessageEntityType
 
-from Emilia import db
+from Chutki import db
 
 db_ = db.users
 

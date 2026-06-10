@@ -4,14 +4,14 @@ from pyrogram import Client, filters
 from pyrogram.enums import ChatMemberStatus
 from pyrogram.types import ChatMemberUpdated, ChatPermissions, InlineKeyboardMarkup
 
-from Emilia import BOT_ID, DEV_USERS, UPDATE_CHANNEL, SUPPORT_CHAT
-from Emilia import EVENT_LOGS as LOG_CHANNEL
-from Emilia import OWNER_ID, LOGGER
-from Emilia.helper.button_gen import button_markdown_parser
-from Emilia.helper.chat_status import isBotCan, isUserAdmin
-from Emilia.helper.welcome_helper.welcome_fillings import Welcomefillings
-from Emilia.helper.welcome_helper.welcome_send_message import SendWelcomeMessage
-from Emilia.mongo.welcome_mongo import (
+from Chutki import BOT_ID, DEV_USERS, UPDATE_CHANNEL, SUPPORT_CHAT
+from Chutki import EVENT_LOGS as LOG_CHANNEL
+from Chutki import OWNER_ID, LOGGER
+from Chutki.helper.button_gen import button_markdown_parser
+from Chutki.helper.chat_status import isBotCan, isUserAdmin
+from Chutki.helper.welcome_helper.welcome_fillings import Welcomefillings
+from Chutki.helper.welcome_helper.welcome_send_message import SendWelcomeMessage
+from Chutki.mongo.welcome_mongo import (
     DEFAUT_WELCOME,
     GetCaptchaSettings,
     GetCleanWelcome,
@@ -25,10 +25,10 @@ from Emilia.mongo.welcome_mongo import (
     isUserVerified,
     isWelcome,
 )
-from Emilia.pyro.greetings.captcha import button_captcha, text_captcha
-from Emilia.utils.decorators import *
-from Emilia.utils.decorators import logging
-from Emilia.utils.auth import is_owner, is_dev
+from Chutki.pyro.greetings.captcha import button_captcha, text_captcha
+from Chutki.utils.decorators import *
+from Chutki.utils.decorators import logging
+from Chutki.utils.auth import is_owner, is_dev
 
 
 @Client.on_chat_member_updated(filters.group, group=690)
@@ -69,7 +69,7 @@ async def NewMemeber(client: Client, message: ChatMemberUpdated):
 
         user_id = NewUserJson.id
 
-        # Emilia Welcome stuffs
+        # Chutki Welcome stuffs
         if user_id == BOT_ID:
             await client.send_message(
                 chat_id=chat_id,
@@ -89,14 +89,14 @@ async def NewMemeber(client: Client, message: ChatMemberUpdated):
             )
             return
 
-        # Emilia's Special welcome for kami-samas!
+        # Chutki's Special welcome for kami-samas!
         if is_owner(user_id):
             await client.send_message(
                 chat_id=chat_id, text="Omfg, the old man's here. I'm scared! >.<"
             )
             return "WELCOME_BOT_OWNER", user_id, NewUserJson.first_name
 
-        # Emilia's Special welcome for her onii-chan gang!
+        # Chutki's Special welcome for her onii-chan gang!
         if is_dev(user_id):
             await client.send_message(chat_id=chat_id, text="Onii-chan is here owo!")
             return "WELCOME_DEV", user_id, NewUserJson.first_name

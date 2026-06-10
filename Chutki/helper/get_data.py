@@ -2,7 +2,7 @@ from emoji import demojize
 from pyrogram.types import Message
 
 
-from Emilia.mongo.users_mongo import GetChatName
+from Chutki.mongo.users_mongo import GetChatName
 
 
 async def GetChat(chat_id: int, client=None):

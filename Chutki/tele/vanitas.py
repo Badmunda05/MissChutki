@@ -3,10 +3,10 @@ import re
 from telethon import events
 from vanitaspy import User
 
-from Emilia import db, telethn
-from Emilia.custom_filter import register
-from Emilia.functions.admins import can_ban_users
-from Emilia.utils.decorators import *
+from Chutki import db, telethn
+from Chutki.custom_filter import register
+from Chutki.functions.admins import can_ban_users
+from Chutki.utils.decorators import *
 
 vanitas_db = db.vanitas
 

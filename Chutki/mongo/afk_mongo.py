@@ -1,6 +1,6 @@
 import time
 
-from Emilia import db
+from Chutki import db
 
 afk_collection = db.afk
 

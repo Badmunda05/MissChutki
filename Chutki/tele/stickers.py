@@ -5,7 +5,7 @@ from asyncio import sleep
 
 import emoji
 from bs4 import BeautifulSoup
-from Emilia.utils.async_http import get
+from Chutki.utils.async_http import get
 from telethon import Button
 from telethon.errors import FloodWaitError
 from telethon.errors.rpcerrorlist import PackShortNameOccupiedError
@@ -19,10 +19,10 @@ from telethon.tl.types import (
     InputStickerSetItem,
 )
 
-from Emilia import db, telethn
-from Emilia.custom_filter import register
-from Emilia.helper.disable import disable
-from Emilia.utils.decorators import *
+from Chutki import db, telethn
+from Chutki.custom_filter import register
+from Chutki.helper.disable import disable
+from Chutki.utils.decorators import *
 
 pkang = db.pkang
 

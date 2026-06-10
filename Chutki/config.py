@@ -3,7 +3,7 @@ import os
 
 
 def get_user_list(config, key):
-    with open("{}/Emilia/{}".format(os.getcwd(), config), "rb") as json_file:
+    with open("{}/Chutki/{}".format(os.getcwd(), config), "rb") as json_file:
         return orjson.loads(json_file.read())[key]
 
 class Config(object):
@@ -24,7 +24,7 @@ class Config(object):
     OWNER_ID = 6040984893 # Owner ID
  
     TEMP_DOWNLOAD_DIRECTORY = "./" # Temporary Download Directory
-    BOT_NAME = "Emilia" # Bot Name
+    BOT_NAME = "Chutki" # Bot Name
     WALL_API = "6950f53" # Wall API from wall.alphacoders.com
     GROQ_API_KEY = "gsk_mm" # GROQ API Key from groq.com
 

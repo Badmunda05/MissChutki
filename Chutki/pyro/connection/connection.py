@@ -1,14 +1,14 @@
 from pyrogram import Client
 from pyrogram.enums import ChatType
 
-from Emilia import custom_filter
-from Emilia.helper.chat_status import *
-from Emilia.mongo.connection_mongo import (
+from Chutki import custom_filter
+from Chutki.helper.chat_status import *
+from Chutki.mongo.connection_mongo import (
     GetConnectedChat,
     get_allow_connection,
     isChatConnected,
 )
-from Emilia.pyro.connection.connect import connect_button
+from Chutki.pyro.connection.connect import connect_button
 
 
 @Client.on_message(custom_filter.command(commands=("connection")))

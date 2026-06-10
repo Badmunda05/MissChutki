@@ -1,8 +1,8 @@
 import time
 
-from Emilia.custom_filter import register
-from Emilia.functions.admins import get_time
-from Emilia.helper.disable import disable
+from Chutki.custom_filter import register
+from Chutki.functions.admins import get_time
+from Chutki.helper.disable import disable
 
 StartTime = time.time()
 

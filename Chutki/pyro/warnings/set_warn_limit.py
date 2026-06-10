@@ -2,13 +2,13 @@ import html
 
 from pyrogram import Client, enums
 
-import Emilia.strings as strings
-from Emilia import custom_filter
-from Emilia.helper.chat_status import isUserCan
-from Emilia.helper.get_data import GetChat
-from Emilia.mongo.warnings_mongo import set_warn_limit_db
-from Emilia.pyro.connection.connection import connection
-from Emilia.utils.decorators import *
+import Chutki.strings as strings
+from Chutki import custom_filter
+from Chutki.helper.chat_status import isUserCan
+from Chutki.helper.get_data import GetChat
+from Chutki.mongo.warnings_mongo import set_warn_limit_db
+from Chutki.pyro.connection.connection import connection
+from Chutki.utils.decorators import *
 
 
 @usage("/warnlimit [integer]")

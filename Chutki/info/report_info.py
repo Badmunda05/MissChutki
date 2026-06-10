@@ -1,4 +1,4 @@
-from Emilia import BOT_NAME
+from Chutki import BOT_NAME
 
 __mod_name__ = "Reports"
 

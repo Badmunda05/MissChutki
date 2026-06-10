@@ -2,9 +2,9 @@ from pyrogram import Client, filters
 from pyrogram.types import CallbackQuery
 import re
 
-from Emilia import LOGGER
-from Emilia.helper.chat_status import isUserAdmin
-from Emilia.mongo.warnings_mongo import remove_warn
+from Chutki import LOGGER
+from Chutki.helper.chat_status import isUserAdmin
+from Chutki.mongo.warnings_mongo import remove_warn
 
 
 @Client.on_callback_query(filters.regex(r"^warn_(\d+)_(\d+)$"), group=1)

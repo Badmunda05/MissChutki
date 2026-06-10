@@ -4,8 +4,8 @@ import os
 from datetime import datetime
 
 from PIL import Image
-from Emilia import telethn
-from Emilia.custom_filter import register
+from Chutki import telethn
+from Chutki.custom_filter import register
 
 from catbox import CatboxUploader
 

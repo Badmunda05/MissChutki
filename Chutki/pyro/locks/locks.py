@@ -1,11 +1,11 @@
 from pyrogram import Client, enums
 
-import Emilia.strings as strings
-from Emilia import custom_filter
-from Emilia.helper.chat_status import isUserAdmin
-from Emilia.mongo.locks_mongo import get_locks
-from Emilia.pyro.connection.connection import connection
-from Emilia.pyro.locks import lock_map
+import Chutki.strings as strings
+from Chutki import custom_filter
+from Chutki.helper.chat_status import isUserAdmin
+from Chutki.mongo.locks_mongo import get_locks
+from Chutki.pyro.connection.connection import connection
+from Chutki.pyro.locks import lock_map
 
 
 @Client.on_message(custom_filter.command(commands="locks"))

@@ -1,8 +1,8 @@
 from pyrogram.types import ChatPermissions, InlineKeyboardMarkup
 
 
-from Emilia.helper.button_gen import button_markdown_parser
-from Emilia.mongo.welcome_mongo import (
+from Chutki.helper.button_gen import button_markdown_parser
+from Chutki.mongo.welcome_mongo import (
     AppendVerifiedUsers,
     DeleteUsercaptchaData,
     GetWelcome,

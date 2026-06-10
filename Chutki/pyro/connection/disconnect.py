@@ -1,9 +1,9 @@
 from pyrogram import Client
 from pyrogram.enums import ChatType
 
-from Emilia import custom_filter
-from Emilia.mongo.connection_mongo import disconnectChat
-from Emilia.pyro.connection.connection import connection
+from Chutki import custom_filter
+from Chutki.mongo.connection_mongo import disconnectChat
+from Chutki.pyro.connection.connection import connection
 
 
 @Client.on_message(custom_filter.command(commands=("disconnect")))

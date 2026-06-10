@@ -1,8 +1,8 @@
 from pyrogram import Client, enums
 
-from Emilia import custom_filter
-from Emilia.helper.chat_status import isUserAdmin
-from Emilia.mongo.users_mongo import add_chat
+from Chutki import custom_filter
+from Chutki.helper.chat_status import isUserAdmin
+from Chutki.mongo.users_mongo import add_chat
 
 
 @Client.on_message(custom_filter.command(commands="forcecachechat"))

@@ -1,13 +1,13 @@
 from pyrogram import Client
 from pyrogram.enums import MessageEntityType
 
-from Emilia import LOGGER, custom_filter, db
-from Emilia.helper.disable import disable
+from Chutki import LOGGER, custom_filter, db
+from Chutki.helper.disable import disable
 
 user_ = db.users
 
 
-from Emilia.helper.get_user import get_user_id
+from Chutki.helper.get_user import get_user_id
 
 @Client.on_message(custom_filter.command(commands="id", disable=True))
 @disable

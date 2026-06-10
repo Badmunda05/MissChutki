@@ -5,11 +5,11 @@ import time
 from telethon import Button, errors, events, functions
 from telethon.tl.types import Channel
 
-import Emilia.strings as strings
-from Emilia import db as xdb
-from Emilia import telethn
-from Emilia.custom_filter import callbackquery, register
-from Emilia.functions.admins import (
+import Chutki.strings as strings
+from Chutki import db as xdb
+from Chutki import telethn
+from Chutki.custom_filter import callbackquery, register
+from Chutki.functions.admins import (
     can_ban_users,
     cb_can_ban_users,
     extract_time,
@@ -17,7 +17,7 @@ from Emilia.functions.admins import (
     get_user_reason,
     is_admin,
 )
-from Emilia.utils.decorators import exception, logging
+from Chutki.utils.decorators import exception, logging
 
 db = {}
 
@@ -635,7 +635,7 @@ async def dnd(e):
             await e.reply("**DND** mode is currently off, group is not protected!")
         else:
             await e.reply(
-                "**DND** mode is currently on, Emilia will autokick newly joined users without usernames."
+                "**DND** mode is currently on, Chutki will autokick newly joined users without usernames."
             )
     elif q in ["on", "yes", "true"]:
         await xdb.dnd.update_one(

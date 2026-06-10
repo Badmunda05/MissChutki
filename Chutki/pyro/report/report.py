@@ -2,9 +2,9 @@ from asyncio import sleep
 
 from pyrogram import Client, enums, filters
 
-from Emilia import custom_filter
-from Emilia.helper.chat_status import isUserAdmin
-from Emilia.mongo.report_mongo import get_report
+from Chutki import custom_filter
+from Chutki.helper.chat_status import isUserAdmin
+from Chutki.mongo.report_mongo import get_report
 
 
 async def report_(client, message):

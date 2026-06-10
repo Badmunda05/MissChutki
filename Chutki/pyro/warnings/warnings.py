@@ -2,14 +2,14 @@ import html
 
 from pyrogram import Client, enums
 
-import Emilia.strings as strings
-from Emilia import custom_filter
-from Emilia.helper.chat_status import isUserAdmin
-from Emilia.helper.disable import disable
-from Emilia.helper.get_data import GetChat
-from Emilia.mongo.warnings_mongo import get_warn_mode, warn_limit
-from Emilia.pyro.connection.connection import connection
-from Emilia.pyro.warnings.set_warn_mode import WarnModeMap
+import Chutki.strings as strings
+from Chutki import custom_filter
+from Chutki.helper.chat_status import isUserAdmin
+from Chutki.helper.disable import disable
+from Chutki.helper.get_data import GetChat
+from Chutki.mongo.warnings_mongo import get_warn_mode, warn_limit
+from Chutki.pyro.connection.connection import connection
+from Chutki.pyro.warnings.set_warn_mode import WarnModeMap
 
 
 def warn_mode_map(warn_mode_in):

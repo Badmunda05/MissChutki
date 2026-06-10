@@ -2,12 +2,12 @@ import html
 
 from pyrogram import Client, enums
 
-import Emilia.strings as strings
-from Emilia import custom_filter
-from Emilia.helper.chat_status import isUserAdmin
-from Emilia.helper.get_data import GetChat
-from Emilia.mongo.blocklists_mongo import get_blocklist
-from Emilia.pyro.connection.connection import connection
+import Chutki.strings as strings
+from Chutki import custom_filter
+from Chutki.helper.chat_status import isUserAdmin
+from Chutki.helper.get_data import GetChat
+from Chutki.mongo.blocklists_mongo import get_blocklist
+from Chutki.pyro.connection.connection import connection
 
 
 @Client.on_message(custom_filter.command(commands=["blocklist", "blacklist"]))

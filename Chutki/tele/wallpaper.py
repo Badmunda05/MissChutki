@@ -1,12 +1,12 @@
 import asyncio
 import random
 
-from Emilia.utils.async_http import get
+from Chutki.utils.async_http import get
 
-from Emilia import telethn
-from Emilia.custom_filter import register
-from Emilia.helper.disable import disable
-from Emilia.utils.decorators import *
+from Chutki import telethn
+from Chutki.custom_filter import register
+from Chutki.helper.disable import disable
+from Chutki.utils.decorators import *
 
 
 @usage("/wall [query]")

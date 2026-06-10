@@ -1,6 +1,6 @@
 import os
 from os.path import basename, dirname, isfile
-from Emilia import LOGGER
+from Chutki import LOGGER
 
 
 def getListOfFiles(dirName):
@@ -18,7 +18,7 @@ def getListOfFiles(dirName):
 
 
 mod_paths = getListOfFiles(dirName=dirname(__file__)) + getListOfFiles(
-    dirName=dirname(os.getcwd() + "/Emilia/tele/__init__.py")
+    dirName=dirname(os.getcwd() + "/Chutki/tele/__init__.py")
 )
 
 all_modules = [

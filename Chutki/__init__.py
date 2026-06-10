@@ -9,7 +9,7 @@ from motor import motor_asyncio
 from pyrogram import Client
 from telethon import TelegramClient
 
-from Emilia.config import Development as Config
+from Chutki.config import Development as Config
 
 class JSONFormatter(logging.Formatter):
     def format(self, record):
@@ -36,7 +36,7 @@ def _setup_emilia_logging():
             ],
         )
     # Configure the package logger explicitly
-    logger = logging.getLogger("Emilia")
+    logger = logging.getLogger("Chutki")
     logger.setLevel(logging.INFO)
 
     # Ensure at least one console handler to stdout at INFO for this logger
@@ -74,7 +74,7 @@ ANILIST_SECRET = "NTRAM29JYsTVMYphFkLd9meMoPByxB38aBGDWkyg"
 ANILIST_REDIRECT_URL = "https://anilist.co/api/v2/oauth/pin"
 
 
-DOWN_PATH = "Emilia/anime/downloads/"
+DOWN_PATH = "Chutki/anime/downloads/"
 HELP_DICT = dict()
 
 
@@ -149,14 +149,14 @@ DEV_USERS = list(DEV_USERS)
 
 scheduler = AsyncIOScheduler()
 
-LOGGER.info("[Emilia] Emilia Is Starting. | Spiral Tech Project | Licensed Under MIT.")
-plugins = dict(root="Emilia/anime")
-pyro_plugins = dict(root="Emilia/pyro")
+LOGGER.info("[Chutki] Chutki Is Starting. | Spiral Tech Project | Licensed Under MIT.")
+plugins = dict(root="Chutki/anime")
+pyro_plugins = dict(root="Chutki/pyro")
 
 mongo = motor_asyncio.AsyncIOMotorClient(MONGO_DB_URL, minPoolSize=10, maxPoolSize=100)
-db = mongo["Emilia"]
+db = mongo["Chutki"]
 
-from Emilia.utils.memory_store import MemoryStore
+from Chutki.utils.memory_store import MemoryStore
 redis_client = MemoryStore()
 db.redis_client = redis_client
 

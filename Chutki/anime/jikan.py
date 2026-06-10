@@ -2,10 +2,10 @@
 from pyrogram import Client, filters
 from pyrogram.types import CallbackQuery, Message
 
-from Emilia import anibot, custom_filter
-from Emilia.utils.data_parser import get_scheduled
-from Emilia.utils.db import get_collection
-from Emilia.utils.helper import control_user, get_btns
+from Chutki import anibot, custom_filter
+from Chutki.utils.data_parser import get_scheduled
+from Chutki.utils.db import get_collection
+from Chutki.utils.helper import control_user, get_btns
 
 DC = get_collection("DISABLED_CMDS")
 

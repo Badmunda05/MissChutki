@@ -1,5 +1,5 @@
-from Emilia import db
-from Emilia.utils.cache import anonymous_admin_cache
+from Chutki import db
+from Chutki.utils.cache import anonymous_admin_cache
 
 chats = db.chats
 

@@ -1,10 +1,10 @@
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from Emilia import BOT_ID
-from Emilia.helper.chat_status import can_restrict_member
-from Emilia.helper.get_user import get_user_id
-from Emilia.mongo.warnings_mongo import count_user_warn, warn_db, warn_limit
-from Emilia.pyro.warnings.warn_checker import warn_checker
+from Chutki import BOT_ID
+from Chutki.helper.chat_status import can_restrict_member
+from Chutki.helper.get_user import get_user_id
+from Chutki.mongo.warnings_mongo import count_user_warn, warn_db, warn_limit
+from Chutki.pyro.warnings.warn_checker import warn_checker
 
 
 async def warn(client, message, reason, silent=False, warn_user=None):

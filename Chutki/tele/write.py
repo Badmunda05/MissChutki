@@ -1,10 +1,10 @@
 import os
 from telethon import events
 
-from Emilia.custom_filter import register
-from Emilia.helper.disable import disable
-from Emilia.utils.decorators import *
-from Emilia.utils.async_http import get
+from Chutki.custom_filter import register
+from Chutki.helper.disable import disable
+from Chutki.utils.decorators import *
+from Chutki.utils.async_http import get
 
 
 @register(pattern="write", disable=True)

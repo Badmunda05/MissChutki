@@ -3,14 +3,14 @@ from enum import Enum, auto
 
 from pyrogram import Client
 
-from Emilia import custom_filter
-from Emilia.helper.chat_status import CheckAllAdminsStuffs
-from Emilia.helper.convert import convert_time
-from Emilia.helper.get_data import GetChat
-from Emilia.helper.time_checker import get_time, time_string_helper
-from Emilia.mongo.blocklists_mongo import getblocklistmode, setblocklistmode
-from Emilia.pyro.connection.connection import connection
-from Emilia.utils.decorators import *
+from Chutki import custom_filter
+from Chutki.helper.chat_status import CheckAllAdminsStuffs
+from Chutki.helper.convert import convert_time
+from Chutki.helper.get_data import GetChat
+from Chutki.helper.time_checker import get_time, time_string_helper
+from Chutki.mongo.blocklists_mongo import getblocklistmode, setblocklistmode
+from Chutki.pyro.connection.connection import connection
+from Chutki.utils.decorators import *
 
 
 class BlocklistModeMap(Enum):

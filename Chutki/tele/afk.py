@@ -7,9 +7,9 @@ from telethon import events
 from telethon.errors import FloodWaitError
 from telethon.tl.types import MessageEntityMention, MessageEntityMentionName, User
 
-from Emilia import BOT_ID, telethn
-from Emilia.functions.admins import get_time as get_readable_time
-from Emilia.mongo import afk_mongo as db
+from Chutki import BOT_ID, telethn
+from Chutki.functions.admins import get_time as get_readable_time
+from Chutki.mongo import afk_mongo as db
 
 options = [
     "**{}** is here! Was afk for {}",

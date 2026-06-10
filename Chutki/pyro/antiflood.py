@@ -4,13 +4,13 @@ from datetime import datetime, timedelta
 from pyrogram import Client, enums, filters
 from pyrogram.types import ChatPermissions, Message
 
-import Emilia.strings as strings
-from Emilia import custom_filter, db, LOGGER
-from Emilia.helper.chat_status import isBotCan, isUserAdmin
-from Emilia.helper.time_checker import *
-from Emilia.pyro.connection.connection import connection
-from Emilia.utils.decorators import *
-from Emilia.utils.cache import SimpleCache, approvals_cache
+import Chutki.strings as strings
+from Chutki import custom_filter, db, LOGGER
+from Chutki.helper.chat_status import isBotCan, isUserAdmin
+from Chutki.helper.time_checker import *
+from Chutki.pyro.connection.connection import connection
+from Chutki.utils.decorators import *
+from Chutki.utils.cache import SimpleCache, approvals_cache
 
 DB = db.antiflood_chats
 # collection = db.flood_msgs # Deprecated: Using Redis

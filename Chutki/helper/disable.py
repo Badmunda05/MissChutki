@@ -1,9 +1,9 @@
 from telethon import types
 
-from Emilia import LOGGER
-from Emilia.functions.admins import is_admin
-from Emilia.helper.chat_status import isBotCan, isUserAdmin
-from Emilia.mongo.disable_mongo import get_disabled, get_disabledel
+from Chutki import LOGGER
+from Chutki.functions.admins import is_admin
+from Chutki.helper.chat_status import isBotCan, isUserAdmin
+from Chutki.mongo.disable_mongo import get_disabled, get_disabledel
 
 
 def disable(func):

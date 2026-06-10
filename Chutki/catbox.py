@@ -1,9 +1,9 @@
 import os
 
-from Emilia import telethn
+from Chutki import telethn
 
 from catbox import CatboxUploader
-from Emilia.tele.telegraph import resize_image
+from Chutki.tele.telegraph import resize_image
 
 
 uploader = CatboxUploader()

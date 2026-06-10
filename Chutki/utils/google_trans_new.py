@@ -6,7 +6,7 @@ from urllib.parse import quote
 
 import aiohttp
 import urllib3
-from Emilia.helper.http import get_aiohttp_session
+from Chutki.helper.http import get_aiohttp_session
 
 LANGUAGES = {
     "af": "afrikaans",

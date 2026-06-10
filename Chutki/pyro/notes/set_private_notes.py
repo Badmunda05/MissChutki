@@ -1,10 +1,10 @@
 from pyrogram import Client
 
-from Emilia import custom_filter
-from Emilia import BOT_NAME
-from Emilia.helper.chat_status import isUserAdmin
-from Emilia.mongo.notes_mongo import is_pnote_on, set_private_note
-from Emilia.pyro.connection.connection import connection
+from Chutki import custom_filter
+from Chutki import BOT_NAME
+from Chutki.helper.chat_status import isUserAdmin
+from Chutki.mongo.notes_mongo import is_pnote_on, set_private_note
+from Chutki.pyro.connection.connection import connection
 
 PRIVATE_NOTES_TRUE = ["on", "true", "yes", "y"]
 PRIVATE_NOTES_FALSE = ["off", "false", "no", "n"]

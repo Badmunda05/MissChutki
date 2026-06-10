@@ -1,15 +1,15 @@
 import base64
 import random
 
-from Emilia.utils.async_http import post
+from Chutki.utils.async_http import post
 from telethon import Button, types
 from webcolors import hex_to_name, name_to_hex
 
-from Emilia import LOGGER, db
-from Emilia.custom_filter import InlineQuery
-from Emilia.custom_filter import callbackquery as Callback
-from Emilia.custom_filter import register as command
-from Emilia.functions.admins import can_change_info
+from Chutki import LOGGER, db
+from Chutki.custom_filter import InlineQuery
+from Chutki.custom_filter import callbackquery as Callback
+from Chutki.custom_filter import register as command
+from Chutki.functions.admins import can_change_info
 
 qr = {}
 quotly = db.quotly
@@ -220,7 +220,7 @@ async def _quotly_api_(e):
     try:
         fq = req.json()["result"]["image"]
         buffer = base64.b64decode(fq.encode("utf-8"))
-        from Emilia.utils.executors import run_in_thread
+        from Chutki.utils.executors import run_in_thread
 
         def write_file_sync(path, data):
             with open(path, "wb") as f:

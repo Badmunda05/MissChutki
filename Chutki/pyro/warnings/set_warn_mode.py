@@ -3,15 +3,15 @@ from enum import Enum, auto
 
 from pyrogram import Client, enums
 
-import Emilia.strings as strings
-from Emilia import custom_filter
-from Emilia.helper.chat_status import isBotAdmin, isUserCan
-from Emilia.helper.convert import convert_time
-from Emilia.helper.get_data import GetChat
-from Emilia.helper.time_checker import get_time, time_string_helper
-from Emilia.mongo.warnings_mongo import set_warn_mode_db
-from Emilia.pyro.connection.connection import connection
-from Emilia.utils.decorators import *
+import Chutki.strings as strings
+from Chutki import custom_filter
+from Chutki.helper.chat_status import isBotAdmin, isUserCan
+from Chutki.helper.convert import convert_time
+from Chutki.helper.get_data import GetChat
+from Chutki.helper.time_checker import get_time, time_string_helper
+from Chutki.mongo.warnings_mongo import set_warn_mode_db
+from Chutki.pyro.connection.connection import connection
+from Chutki.utils.decorators import *
 
 
 class WarnModeMap(Enum):

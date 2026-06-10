@@ -1,14 +1,14 @@
 from pyrogram import Client, enums
 
-import Emilia.strings as strings
-from Emilia import custom_filter
-from Emilia.helper.chat_status import isBotCan, isUserCan
-from Emilia.mongo.blocklists_mongo import (
+import Chutki.strings as strings
+from Chutki import custom_filter
+from Chutki.helper.chat_status import isBotCan, isUserCan
+from Chutki.mongo.blocklists_mongo import (
     blocklistMessageDelete,
     getblocklistMessageDelete,
 )
-from Emilia.pyro.connection.connection import connection
-from Emilia.utils.decorators import *
+from Chutki.pyro.connection.connection import connection
+from Chutki.utils.decorators import *
 
 BLOCKLIST_DELETE_TRUE = ["on", "yes"]
 BLOCKLIST_DELETE_FALSE = ["off", "no"]

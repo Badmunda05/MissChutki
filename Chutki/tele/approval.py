@@ -3,20 +3,20 @@
 from telethon import Button
 from telethon.tl.types import Channel
 
-import Emilia.strings as strings
-from Emilia import db
-from Emilia.custom_filter import callbackquery as inline
-from Emilia.custom_filter import register
-from Emilia.functions.admins import (
+import Chutki.strings as strings
+from Chutki import db
+from Chutki.custom_filter import callbackquery as inline
+from Chutki.custom_filter import register
+from Chutki.functions.admins import (
     can_ban_users,
     cb_can_change_info,
     get_user_reason,
     is_admin,
     is_owner,
 )
-from Emilia.helper.get_data import GetChat
-from Emilia.pyro.connection.connection import connection
-from Emilia.utils.decorators import *
+from Chutki.helper.get_data import GetChat
+from Chutki.pyro.connection.connection import connection
+from Chutki.utils.decorators import *
 
 approve_d = db.approve_d
 

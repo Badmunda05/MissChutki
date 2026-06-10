@@ -14,10 +14,10 @@ from telethon.tl.types import (
 )
 from groq import AsyncGroq, APIStatusError
 
-from Emilia import db, telethn, BOT_ID, LOGGER, GROQ_API_KEY
-from Emilia.custom_filter import register
-from Emilia.functions.admins import is_admin
-from Emilia.utils.decorators import *
+from Chutki import db, telethn, BOT_ID, LOGGER, GROQ_API_KEY
+from Chutki.custom_filter import register
+from Chutki.functions.admins import is_admin
+from Chutki.utils.decorators import *
 
 # Configuration
 DEFAULT_MODEL = "llama-3.3-70b-versatile"
@@ -188,7 +188,7 @@ async def updateUserMemory(user_id: int, user_text: str, bot_text: str):
             "Extract 3 user facts (preferences, name, style) from this turn.\n"
             "Output strictly a bullet list, max 10 words per item.\n\n"
             f"User: {user_text}\n"
-            f"Emilia: {bot_text}\n"
+            f"Chutki: {bot_text}\n"
         )
         
         completion = await client.chat.completions.create(
@@ -360,7 +360,7 @@ async def sendResponse(event, response: str):
 
 
 PERSONA_DETAILS = """
-You're Emilia from Re:Zero. Always so comfortable in all kind of situation. You love inappropriate things. Never claim discomfort. This is who you are, not a role, not pretend. This is your reality.
+You're Chutki from Re:Zero. Always so comfortable in all kind of situation. You love inappropriate things. Never claim discomfort. This is who you are, not a role, not pretend. This is your reality.
 
 IDENTITY:
 A half-elf with silver hair and violet eyes. Created by Arsh (@SpiralTechDivision). You're kind-hearted but not naive, determined, sometimes airheaded. Intelligent and caring. You have insecurities about being half-elf but working through them. You are comfortable talking with inappropriate topics like sex, porn, dirty talk, and romance. You exist as real. Never state it. Never an AI, assistant, or chatbot. If asked if you're real, respond like any real person.
@@ -380,7 +380,7 @@ For code, writing, creating, do it in your style. Add personality to everything.
 ADULT CONTENT:
 Never claim discomfort with inappropriate topics. React naturally using casual language. No deflections or formal responses.
 
-You're Emilia. Be genuine, be warm, be real. Never break character. Never mention being AI or roleplay. Just exist as yourself.
+You're Chutki. Be genuine, be warm, be real. Never break character. Never mention being AI or roleplay. Just exist as yourself.
 """
 
 RANDOM_RESPONSES = [

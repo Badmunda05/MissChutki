@@ -5,7 +5,7 @@ import time
 import asyncio
 from typing import Any, Dict, Optional, Callable
 from functools import wraps
-from Emilia import LOGGER
+from Chutki import LOGGER
 
 
 class MultiLevelCache:

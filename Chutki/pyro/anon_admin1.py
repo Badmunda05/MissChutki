@@ -2,13 +2,13 @@ import html
 
 from pyrogram import Client, enums
 
-import Emilia.strings as strings
-from Emilia import custom_filter
-from Emilia.helper.chat_status import isUserCreator
-from Emilia.helper.get_data import GetChat
-from Emilia.mongo.chats_settings_mongo import anonadmin_db, get_anon_setting
-from Emilia.pyro.connection.connection import connection
-from Emilia.utils.decorators import *
+import Chutki.strings as strings
+from Chutki import custom_filter
+from Chutki.helper.chat_status import isUserCreator
+from Chutki.helper.get_data import GetChat
+from Chutki.mongo.chats_settings_mongo import anonadmin_db, get_anon_setting
+from Chutki.pyro.connection.connection import connection
+from Chutki.utils.decorators import *
 
 ANONADMIN_TRUE = ["yes", "on"]
 ANONADMIN_FALSE = ["no", "off"]

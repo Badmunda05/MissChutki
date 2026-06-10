@@ -3,14 +3,14 @@ import html
 from pyrogram import Client
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-import Emilia.strings as strings
-from Emilia import BOT_USERNAME, custom_filter
-from Emilia.helper.button_gen import button_markdown_parser
-from Emilia.helper.disable import disable
-from Emilia.helper.get_data import GetChat
-from Emilia.helper.note_helper.note_fillings import NoteFillings as rules_filler
-from Emilia.mongo.rules_mongo import get_private_note, get_rules, get_rules_button
-from Emilia.pyro.connection.connection import connection
+import Chutki.strings as strings
+from Chutki import BOT_USERNAME, custom_filter
+from Chutki.helper.button_gen import button_markdown_parser
+from Chutki.helper.disable import disable
+from Chutki.helper.get_data import GetChat
+from Chutki.helper.note_helper.note_fillings import NoteFillings as rules_filler
+from Chutki.mongo.rules_mongo import get_private_note, get_rules, get_rules_button
+from Chutki.pyro.connection.connection import connection
 
 
 @Client.on_message(custom_filter.command(commands="rules", disable=True))

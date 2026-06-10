@@ -6,14 +6,14 @@ from pyrogram.errors import BadRequest, FloodWait
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from vanitaspy import User
 
-from Emilia import DEV_USERS, LOGGER, OWNER_ID, custom_filter, db
-from Emilia.helper.disable import disable
-from Emilia.mongo.afk_mongo import is_afk
-from Emilia.mongo.karma_mongo import user_global_karma
-from Emilia.mongo.user_info import *
-from Emilia.pyro.connection.connection import connection
-from Emilia.utils.decorators import *
-from Emilia.utils.auth import is_owner, is_dev
+from Chutki import DEV_USERS, LOGGER, OWNER_ID, custom_filter, db
+from Chutki.helper.disable import disable
+from Chutki.mongo.afk_mongo import is_afk
+from Chutki.mongo.karma_mongo import user_global_karma
+from Chutki.mongo.user_info import *
+from Chutki.pyro.connection.connection import connection
+from Chutki.utils.decorators import *
+from Chutki.utils.auth import is_owner, is_dev
 
 db_ = db.users
 chatlevels = db.chatlevels

@@ -7,7 +7,7 @@ import sys
 import traceback
 from datetime import datetime
 
-from Emilia.utils.async_http import get
+from Chutki.utils.async_http import get
 from bson.objectid import ObjectId
 from natsort import natsorted
 from pyrogram import Client, enums, filters
@@ -23,13 +23,13 @@ from pyrogram.types import (
     Message,
 )
 
-from Emilia import BOT_USERNAME, DEV_USERS, HELP_DICT, LOGGER
-from Emilia import TRIGGERS as trg
-from Emilia import anibot, custom_filter
-from Emilia.anime.anilist import auth_link_cmd, code_cmd, logout_cmd
-from Emilia.utils.data_parser import get_additional_info, get_anime, get_recommendations
-from Emilia.utils.db import get_collection
-from Emilia.utils.helper import AUTH_USERS, check_user, clog, control_user, get_btns
+from Chutki import BOT_USERNAME, DEV_USERS, HELP_DICT, LOGGER
+from Chutki import TRIGGERS as trg
+from Chutki import anibot, custom_filter
+from Chutki.anime.anilist import auth_link_cmd, code_cmd, logout_cmd
+from Chutki.utils.data_parser import get_additional_info, get_anime, get_recommendations
+from Chutki.utils.db import get_collection
+from Chutki.utils.helper import AUTH_USERS, check_user, clog, control_user, get_btns
 
 USERS = get_collection("USERS")
 GROUPS = get_collection("GROUPS")

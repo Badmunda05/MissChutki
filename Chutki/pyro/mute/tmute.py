@@ -2,11 +2,11 @@ from pyrogram import Client
 from pyrogram.errors import BadRequest
 from pyrogram.types import ChatPermissions, Message
 
-from Emilia import BOT_ID, custom_filter
-from Emilia.helper.chat_status import can_restrict_member, isBotAdmin, isUserAdmin
-from Emilia.helper.text_reason import *
-from Emilia.helper.time_checker import time_converter
-from Emilia.utils.decorators import *
+from Chutki import BOT_ID, custom_filter
+from Chutki.helper.chat_status import can_restrict_member, isBotAdmin, isUserAdmin
+from Chutki.helper.text_reason import *
+from Chutki.helper.time_checker import time_converter
+from Chutki.utils.decorators import *
 
 
 @Client.on_message(custom_filter.command(commands=["tmute", "tempmute"]))

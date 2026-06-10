@@ -7,14 +7,14 @@ from typing import Optional, Tuple
 from pyrogram.types import ChatPermissions
 
 
-from Emilia.mongo.blocklists_mongo import (
+from Chutki.mongo.blocklists_mongo import (
     get_blocklist_reason,
     getblocklistMessageDelete,
     getblocklistmode,
 )
-from Emilia.pyro.warnings.warn import warn
-from Emilia.helper.convert import convert_time
-from Emilia.utils.decorators import logging
+from Chutki.pyro.warnings.warn import warn
+from Chutki.helper.convert import convert_time
+from Chutki.utils.decorators import logging
 
 
 _ACTION_TAG_RE = re.compile(r"\{([^{}]+)\}")

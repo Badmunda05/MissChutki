@@ -1,9 +1,9 @@
-from Emilia import db
-from Emilia.functions.admins import is_owner
-from Emilia.custom_filter import register
-import Emilia.strings as strings
-from Emilia.utils.decorators import rate_limit, RATE_LIMIT_SUPER_HEAVY
-from Emilia.pyro.connection.connection import connection
+from Chutki import db
+from Chutki.functions.admins import is_owner
+from Chutki.custom_filter import register
+import Chutki.strings as strings
+from Chutki.utils.decorators import rate_limit, RATE_LIMIT_SUPER_HEAVY
+from Chutki.pyro.connection.connection import connection
 import orjson
 import os
 from bson import ObjectId

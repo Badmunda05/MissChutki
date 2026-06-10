@@ -1,9 +1,9 @@
 from pyrogram import Client, filters
 from pyrogram.enums import MessageEntityType
 
-from Emilia import custom_filter, db
-from Emilia.helper.chat_status import check_user
-from Emilia.utils.decorators import *
+from Chutki import custom_filter, db
+from Chutki.helper.chat_status import check_user
+from Chutki.utils.decorators import *
 
 # db
 cleanerdb = db.cleaner

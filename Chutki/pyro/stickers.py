@@ -24,11 +24,11 @@ from pyrogram.raw.types import (
 )
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from Emilia import EVENT_LOGS as LOG_CHANNEL, BOT_USERNAME, LOGGER
-from Emilia import custom_filter
-from Emilia.helper.disable import disable
-from Emilia.helper.http import http
-from Emilia.utils.decorators import *
+from Chutki import EVENT_LOGS as LOG_CHANNEL, BOT_USERNAME, LOGGER
+from Chutki import custom_filter
+from Chutki.helper.disable import disable
+from Chutki.helper.http import http
+from Chutki.utils.decorators import *
 
 
 @usage("/stickerid [reply to a sticker]")
@@ -410,7 +410,7 @@ def resize_image_sync(filename: str) -> str:
 
 
 async def resize_image(filename: str) -> str:
-    from Emilia.utils.executors import run_in_process
+    from Chutki.utils.executors import run_in_process
     return await run_in_process(resize_image_sync, filename)
 
 
@@ -452,5 +452,5 @@ def convert_video_sync(input_file):
 
 
 async def convert_video(input_file):
-    from Emilia.utils.executors import run_in_thread
+    from Chutki.utils.executors import run_in_thread
     return await run_in_thread(convert_video_sync, input_file)

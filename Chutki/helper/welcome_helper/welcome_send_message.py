@@ -1,6 +1,6 @@
-from Emilia import BOT_USERNAME
-from Emilia.helper.note_helper.note_misc_helper import preview_text_replace
-from Emilia.helper.welcome_helper.welcome_fillings import Welcomefillings
+from Chutki import BOT_USERNAME
+from Chutki.helper.note_helper.note_misc_helper import preview_text_replace
+from Chutki.helper.welcome_helper.welcome_fillings import Welcomefillings
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 

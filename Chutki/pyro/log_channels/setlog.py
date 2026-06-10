@@ -3,11 +3,11 @@ import html
 from pyrogram import Client
 from pyrogram.enums import ChatType
 
-from Emilia import BOT_ID, custom_filter
-from Emilia.helper.chat_status import isUserCan
-from Emilia.helper.get_data import GetChat
-from Emilia.mongo.log_channels_mongo import set_log_db
-from Emilia.pyro.connection.connection import connection
+from Chutki import BOT_ID, custom_filter
+from Chutki.helper.chat_status import isUserCan
+from Chutki.helper.get_data import GetChat
+from Chutki.mongo.log_channels_mongo import set_log_db
+from Chutki.pyro.connection.connection import connection
 
 
 @Client.on_message(custom_filter.command(commands=("setlog")))

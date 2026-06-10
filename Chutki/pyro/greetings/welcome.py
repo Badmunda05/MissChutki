@@ -1,12 +1,12 @@
 from pyrogram import Client
 from pyrogram.types import InlineKeyboardMarkup
 
-from Emilia import custom_filter
-from Emilia.helper.button_gen import button_markdown_parser
-from Emilia.helper.chat_status import CheckAdmins
-from Emilia.helper.welcome_helper.welcome_fillings import Welcomefillings
-from Emilia.helper.welcome_helper.welcome_send_message import SendWelcomeMessage
-from Emilia.mongo.welcome_mongo import (
+from Chutki import custom_filter
+from Chutki.helper.button_gen import button_markdown_parser
+from Chutki.helper.chat_status import CheckAdmins
+from Chutki.helper.welcome_helper.welcome_fillings import Welcomefillings
+from Chutki.helper.welcome_helper.welcome_send_message import SendWelcomeMessage
+from Chutki.mongo.welcome_mongo import (
     DEFAUT_WELCOME,
     GetCaptchaSettings,
     GetCleanService,
@@ -16,7 +16,7 @@ from Emilia.mongo.welcome_mongo import (
     isGetCaptcha,
     isWelcome,
 )
-from Emilia.pyro.connection.connection import connection
+from Chutki.pyro.connection.connection import connection
 
 WELCOME_TRUE = ["on", "yes"]
 WELCOME_FALSE = ["off", "no"]

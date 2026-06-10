@@ -1,10 +1,10 @@
 from pyrogram import Client, enums
 
-import Emilia.strings as strings
-from Emilia import custom_filter
-from Emilia.helper.chat_status import isUserAdmin
-from Emilia.mongo.blocklists_mongo import get_blocklist, rmblocklist_db
-from Emilia.pyro.connection.connection import connection
+import Chutki.strings as strings
+from Chutki import custom_filter
+from Chutki.helper.chat_status import isUserAdmin
+from Chutki.mongo.blocklists_mongo import get_blocklist, rmblocklist_db
+from Chutki.pyro.connection.connection import connection
 
 
 @Client.on_message(

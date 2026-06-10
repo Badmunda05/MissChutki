@@ -5,10 +5,10 @@ import random
 
 from telethon import Button
 
-from Emilia import telethn as meow
-from Emilia.custom_filter import callbackquery, register
-from Emilia.helper.disable import disable
-from Emilia.utils.async_http import get
+from Chutki import telethn as meow
+from Chutki.custom_filter import callbackquery, register
+from Chutki.helper.disable import disable
+from Chutki.utils.async_http import get
 
 
 async def anime_quote(anime):

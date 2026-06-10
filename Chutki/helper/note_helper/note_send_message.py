@@ -3,12 +3,12 @@ import re
 
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
-from Emilia import BOT_USERNAME
-from Emilia.helper.button_gen import button_markdown_parser
-from Emilia.helper.note_helper.note_fillings import NoteFillings
-from Emilia.helper.note_helper.note_misc_helper import preview_text_replace
-from Emilia.mongo.notes_mongo import GetNote
-from Emilia.pyro.connection.connection import connection
+from Chutki import BOT_USERNAME
+from Chutki.helper.button_gen import button_markdown_parser
+from Chutki.helper.note_helper.note_fillings import NoteFillings
+from Chutki.helper.note_helper.note_misc_helper import preview_text_replace
+from Chutki.mongo.notes_mongo import GetNote
+from Chutki.pyro.connection.connection import connection
 
 
 async def SendNoteMessage(client, message: Message, note_name: str, from_chat_id: int):

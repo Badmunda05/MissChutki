@@ -5,9 +5,9 @@ from captcha.image import ImageCaptcha
 from pyrogram import Client, filters
 from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
 
-from Emilia import BOT_USERNAME
-from Emilia.helper.chat_status import isUserAdmin
-from Emilia.mongo.welcome_mongo import (
+from Chutki import BOT_USERNAME
+from Chutki.helper.chat_status import isUserAdmin
+from Chutki.mongo.welcome_mongo import (
     CaptchaChanceUpdater,
     GetCaptchaSettings,
     GetChance,
@@ -17,10 +17,10 @@ from Emilia.mongo.welcome_mongo import (
     isRuleCaptcha,
     isUserVerified,
 )
-from Emilia.pyro.greetings.captcha.captcharules_button import ruleCaptchaButton
-from Emilia.pyro.greetings.utils.actions import failedAction, passedAction
-from Emilia.pyro.greetings.utils.captcha_text_gen import ButtonGen
-from Emilia.pyro.greetings.utils.random_string_gen import (
+from Chutki.pyro.greetings.captcha.captcharules_button import ruleCaptchaButton
+from Chutki.pyro.greetings.utils.actions import failedAction, passedAction
+from Chutki.pyro.greetings.utils.captcha_text_gen import ButtonGen
+from Chutki.pyro.greetings.utils.random_string_gen import (
     RandomStringGen,
     mathCaptchaGen,
 )
@@ -93,7 +93,7 @@ async def textCaptchaRedirect(client, message):
                     f"{answer_dict.get('num01')} + {answer_dict.get('num02')} = ?"
                 )
 
-            CaptchaLoc = f"Emilia/pyro/greetings/captcha/CaptchaDump/EmiliaCaptcha_text_{new_user_id}_{new_chat_id}.png"
+            CaptchaLoc = f"Chutki/pyro/greetings/captcha/CaptchaDump/ChutkiCaptcha_text_{new_user_id}_{new_chat_id}.png"
             image = ImageCaptcha(
                 width=270, height=90, fonts=["path/font_03.ttf"], font_sizes=(50, 50)
             )

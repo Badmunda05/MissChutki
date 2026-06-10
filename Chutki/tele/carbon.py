@@ -4,10 +4,10 @@ import random
 import carbon
 from telethon import types
 
-from Emilia import LOGGER, SUPPORT_CHAT, telethn
-from Emilia.custom_filter import register
-from Emilia.helper.disable import disable
-from Emilia.utils.decorators import *
+from Chutki import LOGGER, SUPPORT_CHAT, telethn
+from Chutki.custom_filter import register
+from Chutki.helper.disable import disable
+from Chutki.utils.decorators import *
 
 
 @usage("/carbon [text/reply to text]")

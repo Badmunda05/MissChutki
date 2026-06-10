@@ -3,11 +3,11 @@ import re
 from pyrogram import Client, filters
 from urlextract import URLExtract
 
-from Emilia import db
-from Emilia.helper.chat_status import isBotAdmin, isUserAdmin
-from Emilia.mongo.blocklists_mongo import get_blocklist
-from Emilia.pyro.blocklists.checker import blocklist_action
-from Emilia.utils.cache import SimpleCache, approvals_cache
+from Chutki import db
+from Chutki.helper.chat_status import isBotAdmin, isUserAdmin
+from Chutki.mongo.blocklists_mongo import get_blocklist
+from Chutki.pyro.blocklists.checker import blocklist_action
+from Chutki.utils.cache import SimpleCache, approvals_cache
 
 collection = db["approve_d"]
 

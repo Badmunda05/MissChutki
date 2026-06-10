@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 from pyrogram.types import ChatPermissions
 
 
-from Emilia.mongo.warnings_mongo import (
+from Chutki.mongo.warnings_mongo import (
     count_user_warn,
     get_all_warn_reason,
     get_warn_mode,

@@ -3,10 +3,10 @@ import html
 from pyrogram import Client
 from pyrogram.enums import ChatType
 
-from Emilia import custom_filter
-from Emilia.helper.get_data import GetChat
-from Emilia.mongo.connection_mongo import GetConnectedChat, reconnectChat
-from Emilia.pyro.connection.connection import connection
+from Chutki import custom_filter
+from Chutki.helper.get_data import GetChat
+from Chutki.mongo.connection_mongo import GetConnectedChat, reconnectChat
+from Chutki.pyro.connection.connection import connection
 
 
 @Client.on_message(custom_filter.command(commands=("reconnect")))

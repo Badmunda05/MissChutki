@@ -2,17 +2,17 @@ import html
 
 from pyrogram import Client
 
-from Emilia import custom_filter
-from Emilia.helper.chat_status import CheckAllAdminsStuffs
-from Emilia.helper.get_data import GetChat
-from Emilia.mongo.pin_mongo import (
+from Chutki import custom_filter
+from Chutki.helper.chat_status import CheckAllAdminsStuffs
+from Chutki.helper.get_data import GetChat
+from Chutki.mongo.pin_mongo import (
     antichannelpin_db,
     cleanlinked_db,
     get_antichannelpin,
     get_cleanlinked,
 )
-from Emilia.pyro.connection.connection import connection
-from Emilia.utils.decorators import *
+from Chutki.pyro.connection.connection import connection
+from Chutki.utils.decorators import *
 
 CLEAN_LINKED_TRUE = ["on", "yes"]
 CLEAN_LINKED_FALSE = ["off", "no"]
