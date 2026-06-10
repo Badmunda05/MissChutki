@@ -15,7 +15,6 @@ from Emilia.data import HELPABLE, IMPORTED, SUB_MODE, HIDDEN_MOD, USER_INFO
 from Emilia.info import ALL_MODULES
 from Emilia.pyro.nightmode import start_nightmode_scheduler
 from Emilia.utils.helper import j1 as helper_scheduler
-from Emilia.tele.clone import clone_start_up, shutdown_all_clones
 from Emilia.tele.backup import send as send_backup
 from Emilia.helper.http import close_http_clients
 from Emilia.mongo.users_mongo import WRITE_BUFFER
@@ -170,20 +169,7 @@ async def main():
     LOGGER.info("Bot is now online and ready!")
     LOGGER.info("Starting Pyrogram clients...")
     
-    clone_task = None
-    async def delayed_clone_start():
-        try:
-            await asyncio.sleep(10)
-            await clone_start_up()
-        except asyncio.CancelledError:
-            LOGGER.info("Clone startup task cancelled during shutdown")
-            raise
-        except Exception as e:
-            LOGGER.error(f"Clone startup failed: {e}")
-    
-    clone_task = asyncio.create_task(delayed_clone_start())
-    
-    
+
     await asyncio.gather(start_pgram(), start_anibot())
     LOGGER.info("Pyrogram clients exited.")
 
@@ -228,10 +214,6 @@ if __name__ == "__main__":
                 loop.run_until_complete(asyncio.gather(*pending, return_exceptions=True))
             loop.run_until_complete(asyncio.sleep(0.1))
         
-        try:
-            asyncio.run(shutdown_all_clones())
-        except Exception as e:
-            LOGGER.error(f"Error shutting down clone clients: {e}")
         try:
             from Emilia.tele.chatbot import shutdown_chatbot
             asyncio.run(shutdown_chatbot())
