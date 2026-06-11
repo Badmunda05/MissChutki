@@ -3,7 +3,7 @@ import orjson
 
 
 def get_user_list(config, key):
-    with open("{}/Emilia/{}".format(os.getcwd(), config), "rb") as json_file:
+    with open("{}/Chutki/{}".format(os.getcwd(), config), "rb") as json_file:
         return orjson.loads(json_file.read())[key]
 
 
