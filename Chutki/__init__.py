@@ -154,7 +154,7 @@ plugins = dict(root="Chutki/anime")
 pyro_plugins = dict(root="Chutki/pyro")
 
 mongo = motor_asyncio.AsyncIOMotorClient(MONGO_DB_URL, minPoolSize=10, maxPoolSize=100)
-db = mongo["Chutki"]
+db = mongo["GcChutki"]
 
 from Chutki.utils.memory_store import MemoryStore
 redis_client = MemoryStore()
