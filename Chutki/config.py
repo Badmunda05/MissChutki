@@ -1,5 +1,8 @@
 import os
 import orjson
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 def get_user_list(config, key):
