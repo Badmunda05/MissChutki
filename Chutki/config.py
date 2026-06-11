@@ -1,32 +1,44 @@
-import orjson
 import os
+import orjson
 
 
 def get_user_list(config, key):
-    with open("{}/Chutki/{}".format(os.getcwd(), config), "rb") as json_file:
+    with open("{}/Emilia/{}".format(os.getcwd(), config), "rb") as json_file:
         return orjson.loads(json_file.read())[key]
 
+
 class Config(object):
-    API_HASH = "45aabfac" # API_HASH from my.telegram.org
-    API_ID = 62 # API_ID from my.telegram.org
+    # --- Telegram API ---
+    API_ID = int(os.getenv("API_ID", 0))
+    API_HASH = os.getenv("API_HASH", "")
 
-    BOT_ID = 521 # BOT_ID
-    BOT_USERNAME = "Elf_Robot" # BOT_USERNAME
+    # --- Bot Credentials ---
+    TOKEN = os.getenv("TOKEN", "")
+    BOT_ID = int(os.getenv("BOT_ID", 0))
+    BOT_USERNAME = os.getenv("BOT_USERNAME", "")
+    BOT_NAME = os.getenv("BOT_NAME", "Emilia")
 
-    MONGO_DB_URL = "mongodb://username:password@localhost:27017/emi?directConnection=true&authSource=admin" # MongoDB URL from MongoDB Atlas
+    # --- MongoDB ---
+    MONGO_DB_URL = os.getenv("MONGO_DB_URL", "")
 
-    SUPPORT_CHAT = "SpiralTechDivision" # Support Chat Username
-    UPDATE_CHANNEL = "SpiralUpdates" # Update Channel Username
-    START_PIC = "https://pic-bstarstatic.akamaized.net/ugc/9e98b6c8872450f3e8b19e0d0aca02deff02981f.jpg@1200w_630h_1e_1c_1f.webp" # Start Image
-    DEV_USERS = [6040984893, 6461051572, 7107018652] # Dev Users
-    TOKEN = "57375" # Bot Token from @BotFather
-    EVENT_LOGS = -10093 # Event Logs Chat ID
-    OWNER_ID = 6040984893 # Owner ID
- 
-    TEMP_DOWNLOAD_DIRECTORY = "./" # Temporary Download Directory
-    BOT_NAME = "Chutki" # Bot Name
-    WALL_API = "6950f53" # Wall API from wall.alphacoders.com
-    GROQ_API_KEY = "gsk_mm" # GROQ API Key from groq.com
+    # --- Owner / Dev ---
+    OWNER_ID = int(os.getenv("OWNER_ID", 0))
+    DEV_USERS = [
+        int(x) for x in os.getenv("DEV_USERS", "0").split(",") if x.strip().isdigit()
+    ]
+
+    # --- Logs & Support ---
+    EVENT_LOGS = int(os.getenv("EVENT_LOGS", 0))
+    SUPPORT_CHAT = os.getenv("SUPPORT_CHAT", "")
+    UPDATE_CHANNEL = os.getenv("UPDATE_CHANNEL", "")
+
+    # --- Bot Settings ---
+    START_PIC = os.getenv("START_PIC", "")
+    TEMP_DOWNLOAD_DIRECTORY = os.getenv("TEMP_DOWNLOAD_DIRECTORY", "./")
+
+    # --- External APIs ---
+    WALL_API = os.getenv("WALL_API", "")
+    GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
 
 
 class Production(Config):
