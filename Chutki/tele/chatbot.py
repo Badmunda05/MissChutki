@@ -392,3 +392,10 @@ RANDOM_RESPONSES = [
     "I'm afraid I can't assist with that.",
     "I'm here to chat, but I might not have the answer.",
 ]
+
+
+async def shutdown_chatbot():
+    """Cleanup chatbot sessions on shutdown."""
+    global user_chats
+    user_chats.clear()
+    LOGGER.info("[GroqChat] Chatbot sessions cleared on shutdown.")
