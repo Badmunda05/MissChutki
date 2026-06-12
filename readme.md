@@ -1,9 +1,9 @@
 <h1 align="center"> 
-    ✨ Chutki Bot ✨ 
+    ✨ Emilia Bot ✨ 
 </h1>
 
 <p align="center">
-    <img src="https://pic-bstarstatic.akamaized.net/ugc/9e98b6c8872450f3e8b19e0d0aca02deff02981f.jpg" alt="Chutki Bot" width="300"/>
+    <img src="https://pic-bstarstatic.akamaized.net/ugc/9e98b6c8872450f3e8b19e0d0aca02deff02981f.jpg" alt="Emilia Bot" width="300"/>
 </p>
 
 <h3 align="center"> 
@@ -18,7 +18,7 @@ An advanced, feature-rich bot for Telegram with anime modules, AI chat capabilit
         <img src="http://ForTheBadge.com/images/badges/built-with-love.svg" alt="built-with-love">
     </a>
     <br>
-    <img src="https://img.shields.io/github/license/ArshCypherZ/Chutki?style=for-the-badge" alt="LICENSE">
+    <img src="https://img.shields.io/github/license/ArshCypherZ/Emilia?style=for-the-badge" alt="LICENSE">
 </p>
 
 ---
@@ -46,10 +46,10 @@ An advanced, feature-rich bot for Telegram with anime modules, AI chat capabilit
 
 ```bash
 # Clone the repository
-git clone https://github.com/ArshCypherZ/Chutki.git
+git clone https://github.com/ArshCypherZ/Emilia.git
 
 # Navigate to the project directory
-cd Chutki
+cd Emilia
 
 # Install dependencies
 pip3 install -U -r requirements.txt
@@ -61,24 +61,24 @@ pip3 install -U -r requirements.txt
 
 ### Configure Settings
 
-1. Open `Chutki/config.py` to set up all required variables.
-2. Copy the configuration from `config.py` to the `config` variable inside `Chutki/tele/clone.py`, but **leave any values inside `{}` empty**.
+1. Open `Emilia/config.py` to set up all required variables.
+2. Copy the configuration from `config.py` to the `config` variable inside `Emilia/tele/clone.py`, but **leave any values inside `{}` empty**.
 
 <h2 align="center"> 
    ⇝ Run Directly ⇜
 </h2>
 
 ```bash
-python3 -m Chutki
+python3 -m Emilia
 ```
 
-For any deployment issues, contact [Spiral Tech Division](https://t.me/SpiralTechDivision). Running bot: [Chutki](https://t.me/Elf_Robot)
+For any deployment issues, contact [Spiral Tech Division](https://t.me/SpiralTechDivision). Running bot: [Emilia](https://t.me/Elf_Robot)
 
 
 --- 
 ## Contributing
 
-Join us in making Chutki even better!
+Join us in making Emilia even better!
 
 1. **Fork this repository**.
 2. **Create a new branch**: `git checkout -b dev`.

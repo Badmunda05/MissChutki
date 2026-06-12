@@ -20,4 +20,4 @@ COPY . .
 
 STOPSIGNAL SIGTERM
 
-CMD ["python3", "-u", "-m", "Chutki"]
+CMD ["python3", "-u", "-m", "Emilia"]
