@@ -73,6 +73,8 @@ async def start_anibot():
     try:
         await anibot.start()
         LOGGER.info("Anibot client started successfully.")
+        await idle()
+        LOGGER.info("Anibot client stopped.")
     except Exception as e:
         LOGGER.error(f"Failed to start anibot client: {e}")
 
@@ -100,22 +102,16 @@ def stop_telethon_sync():
     try:
         if not telethn:
             return
-        connected = False
-        try:
-            connected = telethn.is_connected()
-        except Exception:
-            connected = True
-        if not connected:
-            return
+        # is_connected() is a coroutine in newer Telethon versions,
+        # so we always attempt disconnect and let it handle gracefully.
         LOGGER.info("Stopping Telethon client...")
-        loop = getattr(telethn, "_loop", None) or asyncio.get_event_loop()
-        fut = asyncio.run_coroutine_threadsafe(telethn.disconnect(), loop)
         try:
-            fut.result(timeout=5)
+            new_loop = asyncio.new_event_loop()
+            new_loop.run_until_complete(telethn.disconnect())
+            new_loop.close()
+            LOGGER.info("Telethon client stopped.")
         except Exception as e:
             LOGGER.error(f"Error during Telethon shutdown: {e}")
-        else:
-            LOGGER.info("Telethon client stopped.")
     except Exception as e:
         LOGGER.error(f"Error stopping Telethon client: {e}")
 
