@@ -46,3 +46,12 @@ cryptg
 TgCrypto
 redis>=5.0.0
 orjson
+# new modules
+qrcode[pil]
+speedtest-cli
+psutil
+phonenumbers
+pytz
+
+# FallenRobot additions
+beautifulsoup4

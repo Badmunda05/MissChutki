@@ -109,13 +109,13 @@ def stop_telethon_sync():
         if not connected:
             return
         LOGGER.info("Stopping Telethon client...")
-        loop = getattr(telethn, "_loop", None) or asyncio.get_event_loop()
-        fut = asyncio.run_coroutine_threadsafe(telethn.disconnect(), loop)
         try:
-            fut.result(timeout=5)
-        except Exception as e:
-            LOGGER.error(f"Error during Telethon shutdown: {e}")
-        else:
+            asyncio.run(telethn.disconnect())
+            LOGGER.info("Telethon client stopped.")
+        except RuntimeError:
+            loop = asyncio.new_event_loop()
+            loop.run_until_complete(telethn.disconnect())
+            loop.close()
             LOGGER.info("Telethon client stopped.")
     except Exception as e:
         LOGGER.error(f"Error stopping Telethon client: {e}")
@@ -168,6 +168,17 @@ async def main():
 
     LOGGER.info("Background tasks have been started.")
     LOGGER.info("Bot is now online and ready!")
+    LOGGER.info("Starting Telethon client...")
+    try:
+        await telethn.start(bot_token=TOKEN)
+        me = await telethn.get_me()
+        telethn.id = me.id
+        telethn.name = (me.first_name or "") + " " + (me.last_name or "")
+        telethn.username = me.username
+        telethn.mention = f"@{me.username}"
+        LOGGER.info(f"Telethon client started as {telethn.name}")
+    except Exception as e:
+        LOGGER.error(f"Failed to start Telethon client: {e}")
     LOGGER.info("Starting Pyrogram clients...")
     
     clone_task = None

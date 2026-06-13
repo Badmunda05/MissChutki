@@ -61,7 +61,7 @@ async def starttt(client, message):
                     InlineKeyboardButton("News", url=f"https://t.me/{UPDATE_CHANNEL}"),
                 ],
                 [InlineKeyboardButton("How to Clone?", callback_data="clone_help")],
-                [InlineKeyboardButton("Source Code", url="https://github.com/ArshCypherZ/Emilia")],
+                [InlineKeyboardButton("Source Code", url="https://github.com/bc")],
             ]
             
             await message.reply_text(
