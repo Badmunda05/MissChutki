@@ -20,7 +20,6 @@ class Config(object):
     START_PIC = "https://pic-bstarstatic.akamaized.net/ugc/9e98b6c8872450f3e8b19e0d0aca02deff02981f.jpg@1200w_630h_1e_1c_1f.webp" # Start Image
     DEV_USERS = [7616808278] # Dev Users
     TOKEN = "8786133106:AAE2O6cR6HJWPPpe-Spukj3HaRNkmABd27k" # Bot Token from @BotFather
-    CLONE_LIMIT = 1 # Number of clones your bot can make
 
     REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6379")
     REDIS_PASSWORD = os.getenv("REDIS_PASSWORD", None)
@@ -33,6 +32,11 @@ class Config(object):
     WALL_API = "6950f53" # Wall API from wall.alphacoders.com
     GROQ_API_KEY = "gsk_mm" # GROQ API Key from groq.com
 
+
+
+    UPSTREAM_REPO = "https://github.com/Spiral-Void/MissChutki"  # Your GitHub repo URL
+    UPSTREAM_BRANCH = "main"                                       # Branch to pull from
+    GIT_TOKEN = None                                               # Fill if repo is private
 
 class Production(Config):
     LOGGER = True

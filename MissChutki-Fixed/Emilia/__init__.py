@@ -67,7 +67,6 @@ SUPPORT_CHAT = Config.SUPPORT_CHAT
 BOT_USERNAME = Config.BOT_USERNAME
 UPDATE_CHANNEL = Config.UPDATE_CHANNEL
 START_PIC = Config.START_PIC
-CLONE_LIMIT = Config.CLONE_LIMIT
 
 TRIGGERS = ("/ !").split()
 ANILIST_CLIENT = 10061
@@ -333,3 +332,8 @@ async def create_indexes():
     await chats.create_index([("bot_ids", 1)])
 
     LOGGER.info("Database indexes created successfully.")
+
+# Git Update vars
+UPSTREAM_REPO   = Config.UPSTREAM_REPO
+UPSTREAM_BRANCH = Config.UPSTREAM_BRANCH
+GIT_TOKEN       = Config.GIT_TOKEN
